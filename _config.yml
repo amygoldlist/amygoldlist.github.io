@@ -12,8 +12,8 @@ paginate: 3
 
 # Links
 links:
-  - title: "abt"
+  - title: "about"
     url: /about
 
-  - title: "git"
+  - title: "github"
     url: http://github.com/amygoldlist
