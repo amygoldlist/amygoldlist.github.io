@@ -1,12 +1,9 @@
-## Facebook Shadow profiles
-##### Amy Goldlist
-###### March 2018
 
 
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/amy.PNG" alt = image width="200">
+<img src="/images/fb_post_images/amy.PNG" alt = "image" width="200">
 <br>
 </h5>
 
@@ -21,7 +18,7 @@ Before we explore the ethics and morality of shadow profiles, we should properly
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/others.PNG" alt = image width="100">
+<img src="/images/fb_post_images/others.PNG" alt = "image" width="100">
 <br>
 </h5>
 
@@ -38,7 +35,7 @@ How does this process work? One of Facebook’s features is called “People you
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/pymk.PNG" alt = image width="200">
+<img src="/images/fb_post_images/pymk.PNG" alt = "image" width="200">
 <br>
 </h5>
 
@@ -47,7 +44,7 @@ which uses data from your own profile and the shadow profile that others have up
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/find_friends.PNG" alt = image width="200">
+<img src="/images/fb_post_images/find_friends.PNG" alt = "image" width="200">
 <br>
 </h5>
 
@@ -57,7 +54,7 @@ If you authorize this feature, on your phone or computer, Facebook will take all
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/import.PNG" alt = image width="200">
+<img src="/images/fb_post_images/import.PNG" alt = "image" width="200">
 <br>
 </h5>
 
@@ -72,7 +69,7 @@ At the heart of the Shadow contact debate is ownership of data.  Who owns the da
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/collect.PNG" alt = image width="200">
+<img src="/images/fb_post_images/collect.PNG" alt = "image" width="200">
 <br>
 </h5>
 
@@ -90,7 +87,7 @@ What if you aren't a member of Facebook?  Though I have not granted Facebook acc
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/not_yet_joined.PNG" alt = image width="200">
+<img src="/images/fb_post_images/not_yet_joined.PNG" alt = "image" width="200">
 <br>
 </h5>
 
@@ -109,11 +106,10 @@ It is fairly likely that they have this type of data on almost everyone, whether
 
 Even though this story became popular recently, and stems from the 2013 bug, it turns out that reports of “alternate data” stem back to a complaint against Facebook Ireland in 2011, as reported in the blog Schneier on Security [Shneier].  At that time, it was alleged that Facebook's practice was contrary to EU laws, and as a result, Facebook EU seems to give you more access to your data than in North American.  To me, this is an admission that Facebook's policy is not up to the standards of European law, even before the GDPR was introduced.
 
-![](delete.PNG)
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/delete.PNG" alt = image width="200">
+<img src="/images/fb_post_images/delete.PNG" alt = "image" width="200">
 <br>
 </h5>
 
