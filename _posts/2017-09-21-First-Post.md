@@ -9,4 +9,10 @@ Currently, I'm on leave from my faculty position in Operations Management in the
 
 I'm new to this whole blogging world, but I'm trying!
 
-![]({{"/images/butterfly.JPG"}})
+
+
+<h5 align="center">
+  <br>
+<img src="/images/butterfly.JPG" alt="sw_vs_st" width="200"></a>
+<br>
+</h5>
