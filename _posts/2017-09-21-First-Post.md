@@ -13,6 +13,6 @@ I'm new to this whole blogging world, but I'm trying!
 
 <h5 align="center">
   <br>
-<img src="/images/butterfly.JPG" alt="sw_vs_st" width="200"></a>
+<img src="/images/butterfly.JPG" alt="sw_vs_st" width="200">
 <br>
 </h5>
