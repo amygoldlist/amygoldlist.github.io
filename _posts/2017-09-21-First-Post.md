@@ -9,4 +9,4 @@ Currently, I'm on leave from my faculty position in Operations Management in the
 
 I'm new to this whole blogging world, but I'm trying!
 
-![](butterfly.JPG)
+![](/images/butterfly.JPG)
