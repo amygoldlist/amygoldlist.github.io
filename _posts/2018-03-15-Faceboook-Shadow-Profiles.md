@@ -3,7 +3,7 @@
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/amy.PNG" alt = "image" width="200">
+<img src="/images/fb_post_images/amy.PNG" alt = "image" width="300">
 <br>
 </h5>
 
@@ -18,7 +18,7 @@ Before we explore the ethics and morality of shadow profiles, we should properly
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/others.PNG" alt = "image" width="100">
+<img src="/images/fb_post_images/others.PNG" alt = "image" width="300">
 <br>
 </h5>
 
@@ -35,7 +35,7 @@ How does this process work? One of Facebook’s features is called “People you
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/pymk.PNG" alt = "image" width="200">
+<img src="/images/fb_post_images/pymk.PNG" alt = "image" width="300">
 <br>
 </h5>
 
@@ -44,7 +44,7 @@ which uses data from your own profile and the shadow profile that others have up
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/find_friends.PNG" alt = "image" width="200">
+<img src="/images/fb_post_images/find_friends.PNG" alt = "image" width="300">
 <br>
 </h5>
 
@@ -54,7 +54,7 @@ If you authorize this feature, on your phone or computer, Facebook will take all
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/import.PNG" alt = "image" width="200">
+<img src="/images/fb_post_images/import.PNG" alt = "image" width="300">
 <br>
 </h5>
 
@@ -69,7 +69,7 @@ At the heart of the Shadow contact debate is ownership of data.  Who owns the da
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/collect.PNG" alt = "image" width="200">
+<img src="/images/fb_post_images/collect.PNG" alt = "image" width="400">
 <br>
 </h5>
 
@@ -83,11 +83,10 @@ From an ethical standpoint, I feel that this is wrong.  If I give my name and em
 
 What if you aren't a member of Facebook?  Though I have not granted Facebook access to my contacts, when I look through my own account, I noticed that I can search by "Not yet joined".  This is proof that Facebook is storing data about people who are not members of Facebook, and so did not sign a user agreement.  
 
-![](not_yet_joined.PNG)
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/not_yet_joined.PNG" alt = "image" width="200">
+<img src="/images/fb_post_images/not_yet_joined.PNG" alt = "image" width="400">
 <br>
 </h5>
 
@@ -109,7 +108,7 @@ Even though this story became popular recently, and stems from the 2013 bug, it 
 
 <h5 align="center">
   <br>
-<img src="/images/fb_post_images/delete.PNG" alt = "image" width="200">
+<img src="/images/fb_post_images/delete.PNG" alt = "image" width="300">
 <br>
 </h5>
 
