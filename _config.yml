@@ -23,8 +23,9 @@ description: "mathematician, teacher, student, author, parent and data scientist
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "about me"
-  Resources:
+  About Me: "about"
+  ## random thing: "link"
+  About this site:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
@@ -65,20 +66,22 @@ footer-link-col: "#404040"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Amy Goldlist
+  github: amygoldlist
+  linkedin: amy-goldlist
 
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
-social-network-links:
+#social-network-links:
   #rss: true
   #email: "someone@example.com"
   #facebook: daattali
-  github: amygoldlist
+  #github: amygoldlist
   #twitter: amygoldlist
 #  reddit: yourname
 #  google-plus: +AmyGoldlist
-   linkedin: amy-goldlist
+   #linkedin: amy-goldlist
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
