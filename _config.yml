@@ -17,7 +17,7 @@ baseurl: ""
 title: Amy Goldlist
 
 # Short description of your site
-description: "mathematician, teacher, student, author, parent and data scientist"
+description: mathematician, teacher, student, author, parent and data scientist
 
 # --- Navigation bar options --- #
 
@@ -130,7 +130,7 @@ share-links-active:
 
 # Excerpt Word Length
 # Truncates the excerpt to the specified number of words on the index page
-excerpt_length: 50
+#excerpt_length: 50
 
 # Character used to separate site title and description in HTML document title
 # and RSS feed title
