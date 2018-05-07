@@ -1,18 +1,35 @@
-# Site settings
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+highlighter: rouge
+relative_permalinks: true
+
+# Setup
 title: "Amy Goldlist"
-description: "A personal blog."
+tagline: "A personal blog."
+description: "mathematician, teacher, student, author, parent and data scientist"
 baseurl: ""
 url: "http://amygoldlist.github.io"
 
-# Build settings
-markdown: kramdown
-permalink: pretty
-highlighter: rouge
-paginate: 3
+
+#author:
+  #name:           'Amy Goldlist'
+  #url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+#github:
+#  repo:           https://github.com/poole/hyde
 
 # Links
 links:
-  - title: "about"
+  - title: "about me"
     url: /about
 
   - title: "github"
