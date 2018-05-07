@@ -47,8 +47,8 @@ navbar-links:
 navbar-col:   "#697800" ##olive green ##"#F5F5F5"  ## light gray
 navbar-text-col: "#FFFFE0" ##pale yellow ##"#404040"  ##charcoal
 navbar-children-col: "#F5F5F5"  ##white?
-page-col: "#FFFFFF"  ##white
-link-col: "#008AFF"  ##blue
+page-col: "#FFFFE0" ##pale yellow "#FFFFFF"  ##white
+link-col: "#cc0000" ## red  "#008AFF"  ##blue
 hover-col: "#0085A1"  ## teal blue
 footer-col: "#697800" ##olive green  "#F5F5F5"
 footer-text-col: "#FFFFE0" #"#404040"  ##charcoal"#777777"  ##gray
