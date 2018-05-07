@@ -15,14 +15,11 @@ description: "mathematician, teacher, student, author, parent and data scientist
 url: "http://amygoldlist.github.io"
 
 
-#author:
-  #name:           'Amy Goldlist'
-  #url:            https://twitter.com/mdo
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+#version:          2.1.0
 
 #github:
 #  repo:           https://github.com/poole/hyde
