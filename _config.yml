@@ -45,7 +45,7 @@ navbar-links:
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
 navbar-col:   "#697800" ##olive green ##"#F5F5F5"  ## light gray
-navbar-text-col: "#FFFFE0" pale yellow ##"#404040"  ##charcoal
+navbar-text-col: "#FFFFE0" ##pale yellow ##"#404040"  ##charcoal
 navbar-children-col: "#F5F5F5"  ##white?
 page-col: "#FFFFFF"  ##white
 link-col: "#008AFF"  ##blue
