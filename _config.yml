@@ -30,3 +30,5 @@ links:
 
   - title: "github"
     url: http://github.com/amygoldlist
+
+theme: jekyll-theme-minimal
