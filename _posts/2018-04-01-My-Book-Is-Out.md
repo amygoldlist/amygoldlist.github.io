@@ -1,3 +1,8 @@
+---
+layout: post
+title: My Book Is Out
+---
+
 <h5 align="center">
   <br>
 <img src="/images/essentials.jpg" alt = "image" width="300">
