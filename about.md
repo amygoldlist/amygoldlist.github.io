@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Amy Goldlist
-subtitle: Details about me
+subtitle: Some backstory
 permalink: /about/
 ---
 
