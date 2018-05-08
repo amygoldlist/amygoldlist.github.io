@@ -29,14 +29,15 @@ navbar-links:
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
   #Author's home: "http://deanattali.com"
-  Other links:
-    - coming soon!: "http://google.ca/"
+  #Other links:
+  #  - coming soon!: "http://google.ca/"
   Cool Projects I contribute too:
-    -  `ptoolkit`, an R package: "https://github.com/UBC-MDS/ptoolkit"
-    - `p_toolkit`, a python module: "https://github.com/UBC-MDS/p_toolkit_Python"
-    - `LufthansaR`, an R package: "https://github.com/peter0083/LufthansaR"
+    -  ptoolkit, an R package: "https://github.com/UBC-MDS/ptoolkit"
+    - p_toolkit, a python module: "https://github.com/UBC-MDS/p_toolkit_Python"
+    - LufthansaR, an R package: "https://github.com/peter0083/LufthansaR"
   Projects:
     - Baby Name selector: "https://goldlist.shinyapps.io/Baby_Name_Visualizer/"
+  Essentials of Business Statistics: "http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/"
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
