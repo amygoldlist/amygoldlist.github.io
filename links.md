@@ -5,10 +5,12 @@ subtitle: Links
 permalink: /links/
 ---
 
-## Some Projects of mine
+## Some Projects
 - [Baby Name selector](https://goldlist.shinyapps.io/Baby_Name_Visualizer/), an R shiny app that let's you explore the popularity of baby names.
 
 - [Student Performance Prediction](https://github.com/amygoldlist/student_performance_predictions/blob/master/report.md), in which I use some machine learning techniques to see if I can predict math grades based on demographics.  Spoiler: I don't succeed.
+
+- [Star Wars vs Star Trek](https://github.com/amygoldlist/geek_sw_vs_st), a team project where we attempted to find a scientific answer to the questions "Does preference for Star Trek over Star Wars increase with geekiness?"  Spoiler: It doesn't.  But you can take our [survey](https://docs.google.com/forms/d/e/1FAIpQLSeqOI6W16UiiSh5LFngb5gjdM1ZHqsQ4zXytjOKEWQunqeUjA/viewform) and read the [conclusions](https://github.com/amygoldlist/geek_sw_vs_st/blob/master/doc/report.md) and see if you agree.  Bonus:  If you like reproducibility, you can run the entire analysis through the attached dockerfile.
 
 
 ## Cool Packages I contribute to:
