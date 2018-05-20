@@ -1,23 +1,36 @@
 ---
 layout: page
-title: Amy Goldlist
+title: More about me
 subtitle: Links
 permalink: /links/
 ---
 
+## Some Projects of mine
+- [Baby Name selector](https://goldlist.shinyapps.io/Baby_Name_Visualizer/), an R shiny app that let's you explore the popularity of baby names.
 
-## Cool Projects I contribute to
+- [Student Performance Prediction](https://github.com/amygoldlist/student_performance_predictions/blob/master/report.md), in which I use some machine learning techniques to see if I can predict math grades based on demographics.  Spoiler: I don't succeed.
+
+-
+
+
+
+## Cool Projects I contribute to:
   -  [ptoolkit](https://github.com/UBC-MDS/ptoolkit), an R package
   - [p_toolkit](https://github.com/UBC-MDS/p_toolkit_Python), a python module
   - [LufthansaR](https://github.com/peter0083/LufthansaR), an R package:
 
-## Some Projects of mine
-  - [Baby Name selector](https://goldlist.shinyapps.io/Baby_Name_Visualizer/), an R shiny app
+
 
 
 ##  [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/)
 
-![](../images/essentials.jpg)
+* Did I mention that I wrote a book?  I did!
+<h5 align="center">
+  <br>
+<img src="../images/essentials.jpg" alt = "Essentials of Business Statistics" width="150">
+<br>
+</h5>
+
 
 
 
