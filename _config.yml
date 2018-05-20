@@ -24,10 +24,10 @@ description: mathematician, teacher, student, author, parent and data scientist
 navbar-links:
   About Me: "about"
   ## random thing: "link"
-  Make a site just like this:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
+  #Make a site just like this:
+  #  - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+  #  - Learn markdown: "http://www.markdowntutorial.com/"
+  #  - GitHub Pages: "https://pages.github.com/"
   #Author's home: "http://deanattali.com"
   #Other links:
   #  - coming soon!: "http://google.ca/"
@@ -76,15 +76,15 @@ author:
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
-#social-network-links:
-  #rss: true
-  #email: "someone@example.com"
+social-network-links:
+  rss: true
+  email: "amygoldlist (at) gmail (dot) com"
   #facebook: daattali
-  #github: amygoldlist
+  github: amygoldlist
   #twitter: amygoldlist
 #  reddit: yourname
 #  google-plus: +AmyGoldlist
-   #linkedin: amy-goldlist
+  linkedin: amy-goldlist
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -105,7 +105,7 @@ share-links-active:
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-#url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "https://amygoldlist.github.io/"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Web Statistics Section --- #
 
@@ -133,7 +133,7 @@ share-links-active:
 
 # Excerpt Word Length
 # Truncates the excerpt to the specified number of words on the index page
-excerpt_length: 500
+excerpt_length: 700
 
 # Character used to separate site title and description in HTML document title
 # and RSS feed title
