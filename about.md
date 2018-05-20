@@ -21,7 +21,7 @@ Want to see some of my projects?  I have a [github](https://github.com/amygoldli
 
 
 <h4 align="center">
-<IMG SRC="images/mountain.jpg" ALT="Me next to a mountain with my latte" width = "250"> <BR>
+<IMG SRC="/images/mountain.jpg" ALT="Me next to a mountain with my latte" width = "250"> <BR>
 <font size = "1"><i>Me Being a Typical Vancouverite when I moved here:<BR>
 Note the latte and the mountain!</i></font>
 </h4>
