@@ -6,21 +6,21 @@ permalink: /links/
 ---
 
 ## Some Projects
-- [Baby Name selector](https://goldlist.shinyapps.io/Baby_Name_Visualizer/), an R shiny app that let's you explore the popularity of baby names.
+- [Baby Name selector](https://goldlist.shinyapps.io/Baby_Name_Visualizer/), an R shiny app that let's you explore the popularity of baby names.  If you want to see the code, it's available on [github](https://github.com/amygoldlist/baby_names).
 
-- [Student Performance Prediction](https://github.com/amygoldlist/student_performance_predictions/blob/master/report.md), in which I use some machine learning techniques to see if I can predict math grades based on demographics.  Spoiler: I don't succeed.
+- [Student Performance Prediction](https://github.com/amygoldlist/student_performance_predictions/blob/master/report.md), in which I use some machine learning techniques to see if I can predict math grades based on demographics.  Spoiler: I don't succeed (and I'll argue this is a good thing, because anyone from any background can succeed at learning math).
 
 - [Star Wars vs Star Trek](https://github.com/amygoldlist/geek_sw_vs_st), a team project where we attempted to find a scientific answer to the questions "Does preference for Star Trek over Star Wars increase with geekiness?"  Spoiler: It doesn't.  But you can take our [survey](https://docs.google.com/forms/d/e/1FAIpQLSeqOI6W16UiiSh5LFngb5gjdM1ZHqsQ4zXytjOKEWQunqeUjA/viewform) and read the [conclusions](https://github.com/amygoldlist/geek_sw_vs_st/blob/master/doc/report.md) and see if you agree.  Bonus:  If you like reproducibility, you can run the entire analysis through the attached dockerfile.
 
 
 ## Cool Packages I contribute to:
-  -  [ptoolkit](https://github.com/UBC-MDS/ptoolkit), an R package to adjust p-values for multiple comparisons/
+  -  [ptoolkit](https://github.com/UBC-MDS/ptoolkit), an R package to adjust p-values for multiple comparisons.
 
   - [p_toolkit](https://github.com/UBC-MDS/p_toolkit_Python), a python module that also adjusts p-values for multiple comparisons.
 
-  - [LufthansaR](https://github.com/peter0083/LufthansaR), an R package that lets you interact with the Lufthansa API and get updated flight information.
+  - [LufthansaR](https://github.com/peter0083/LufthansaR), an R package that lets you interact with the Lufthansa API and get updated flight information.  I recommend installing and running `LufthansaR::get_flight_status("AC123")` to fin out whether my favourite Toronto/Vancouver flight is running to schedule.
 
-  - [aggRviz](https://github.com/amygoldlist/aggRviz), an R package to organize and visualize data that is in aggregated form.
+  - [aggRviz](https://github.com/amygoldlist/aggRviz), an R package to organize and visualize data that is in aggregated form. At present, this is still in development stage, but is due for its first release very soon.
 
 
 
