@@ -13,10 +13,11 @@ permalink: /about/
 
 Hi! I'm Amy Goldlist, and I'm a mathematician, teacher, student, author, parent and data scientist.
 
-Currently, I'm on leave from my faculty position in Operations Management in the School of Business at the British Columbia Institute of Technology, [BCIT](https://www.bcit.ca/business/).  I'm currently completing an [MDS](https://ubc-mds.github.io/) (Masters of Data Science) at [UBC](https://www.ubc.ca/), where incidentally I received my MSc in Mathematics years ago.  I also have an Honours BSc from [the University of King's College](https://ukings.ca/) and [Dalhousie University](https://www.dal.ca/), coincidentally also in Math.
+ I'm a faculty member in Operations Management in the School of Business at the British Columbia Institute of Technology, [BCIT](https://www.bcit.ca/business/).  I've just completed an [MDS](https://ubc-mds.github.io/) (Masters of Data Science) at [UBC](https://www.ubc.ca/), where incidentally I received my MSc in Mathematics (Algebraic Number Theory) years ago.  I also have an Honours BSc from [the University of King's College](https://ukings.ca/) and [Dalhousie University](https://www.dal.ca/), coincidentally also in Math.
 
-An author you say?  Feel free to purchase [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/), available through Wiley.
+An author you say?  I am  also a coauthor of the textbook:  [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/) with Ken Black, Timothy Edmunds and Ignacio Castillo, available via Wiley Publishing.  
 
+I live in Vancouver, British Columbia with my family.
 
 <h4 align="center">
 <IMG SRC="/images/mountain.jpg" ALT="Me next to a mountain with my latte" width = "250"> <BR>
