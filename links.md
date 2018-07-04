@@ -49,3 +49,5 @@ permalink: /links/
 * Ever seen me working on a cool looking puzzle that I printed off of the internet?  check out [Kwon-Tom Loop](https://kwontomloop.com/), and sign up for a free account to print off your own puzzles.  Speaking of puzzles, I enjoy [lightbulbs](https://www.puzzle-light-up.com/) as well.
 
 * Interested in art?  I enjoy painting, particularly copying some of my favourite artists: Van Gogh, Tom Thompson, Ted Harrison, Roy Henry Vickers to name a few.  You can check out my work [here](https://knockoffart.blogspot.com/).
+
+* Do you like computer games that are entirely logic based?  Check out my favourite game designer, [Everett Kaser Software](http://www.kaser.com/) which I have been buying and playing since... Well I don't remember.  I feel like I might have had Sherlock on MD DOS? 
