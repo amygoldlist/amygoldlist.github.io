@@ -32,6 +32,7 @@ navbar-links:
   #Other links:
   #  - coming soon!: "http://google.ca/"
   Links: "links"
+  Blog: '_posts'
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
