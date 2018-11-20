@@ -31,8 +31,9 @@ navbar-links:
   #Author's home: "http://deanattali.com"
   #Other links:
   #  - coming soon!: "http://google.ca/"
+  Blog: 'posts'
   Links: "links"
-  Blog: '_posts'
+
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
