@@ -23,16 +23,16 @@ description: mathematician, teacher, student, author, parent and data scientist
 # List of links in the navigation bar
 navbar-links:
   About Me: "about"
-  ## random thing: "link"
-  #Make a site just like this:
-  #  - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-  #  - Learn markdown: "http://www.markdowntutorial.com/"
-  #  - GitHub Pages: "https://pages.github.com/"
-  #Author's home: "http://deanattali.com"
-  #Other links:
-  #  - coming soon!: "http://google.ca/"
   Blog: 'index'
   Links: "links"
+  ## I think that I want it to look like:
+  ## Blog: "blog"
+  ## About Me "index"
+  ###  but I need to rename some stuff.   working on it!!
+
+  ## random thing: "link"
+
+
 
 
 
