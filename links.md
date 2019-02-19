@@ -35,6 +35,10 @@ permalink: /links/
 </h5>
 
 
+## [Centre for Excellence in Analytics](https://www.bcit.ca/cea/)
+
+* If you are interested in learning more about Business Analytics and Data Analytics, [BCIT](https://www.bcit.ca/cea/) has you covered.
+
 ## Math
 
 
@@ -50,4 +54,4 @@ permalink: /links/
 
 * Interested in art?  I enjoy painting, particularly copying some of my favourite artists: Van Gogh, Tom Thompson, Ted Harrison, Roy Henry Vickers to name a few.  You can check out my work [here](https://knockoffart.blogspot.com/).
 
-* Do you like computer games that are entirely logic based?  Check out my favourite game designer, [Everett Kaser Software](http://www.kaser.com/) which I have been buying and playing since... Well I don't remember.  I feel like I might have had Sherlock on MD DOS? 
+* Do you like computer games that are entirely logic based?  Check out my favourite game designer, [Everett Kaser Software](http://www.kaser.com/) which I have been buying and playing since... Well I don't remember.  I feel like I might have had Sherlock on MS DOS?
