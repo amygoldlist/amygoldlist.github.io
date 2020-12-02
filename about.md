@@ -2,7 +2,7 @@
 layout: page
 title: Amy Goldlist
 subtitle: Some backstory
-permalink: /about/
+permalink: /
 ---
 
 <h5 align="center">
