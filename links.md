@@ -5,6 +5,10 @@ subtitle: Links
 permalink: /links/
 ---
 
+## [Centre for Excellence in Analytics](https://www.bcit.ca/cea/)
+
+* If you are interested in learning more about Business Analytics and Data Analytics, [BCIT](https://www.bcit.ca/cea/) has you covered.
+
 ## Some Projects
 - [Baby Name selector](https://goldlist.shinyapps.io/Baby_Name_Visualizer/), an R shiny app that let's you explore the popularity of baby names.  If you want to see the code, it's available on [github](https://github.com/amygoldlist/baby_names).
 
@@ -35,9 +39,7 @@ permalink: /links/
 </h5>
 
 
-## [Centre for Excellence in Analytics](https://www.bcit.ca/cea/)
 
-* If you are interested in learning more about Business Analytics and Data Analytics, [BCIT](https://www.bcit.ca/cea/) has you covered.
 
 ## Math
 
