@@ -23,7 +23,7 @@ description: mathematician, teacher, student, author, parent and data scientist
 # List of links in the navigation bar
 navbar-links:
   About Me: "about"
-  Blog: 'index'
+  Blog: 'blog'
   Links: "links"
   ## I think that I want it to look like:
   ## Blog: "blog"

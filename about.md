@@ -76,3 +76,4 @@ _Yes you did!  That was probably this [Heritage Minute](https://www.historicacan
 * [Linked In](https://www.linkedin.com/in/amy-goldlist/)
 * [github](https://github.com/amygoldlist)
 * [Links](/links)
+* [Blog](/blog)
