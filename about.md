@@ -15,7 +15,7 @@ Hi! I'm Amy Goldlist, and I'm a mathematician, teacher, student, author, parent 
 
  I'm a faculty member in Operations Management in the School of Business at the British Columbia Institute of Technology, [BCIT](https://www.bcit.ca/business/), where I am Program Head of [Business Analytics](https://www.bcit.ca/programs/business-analytics-graduate-certificate-part-time-a300grcert/).  I also work with the [Centre for Excellence in Analytics]() at BCIT as the Data Analyst in Residence.
 
- I've have an [MDS](https://ubc-mds.github.io/) (Masters of Data Science) from [UBC](https://www.ubc.ca/), where incidentally I also received my MSc in Mathematics (Algebraic Number Theory) years ago.  I have an Honours BSc from [the University of King's College](https://ukings.ca/) and [Dalhousie University](https://www.dal.ca/), coincidentally also in Math.  (It's not a coincidence).
+ I have an [MDS](https://ubc-mds.github.io/) (Masters of Data Science) from [UBC](https://www.ubc.ca/), where incidentally I also received my MSc in Mathematics (Algebraic Number Theory) years ago.  I have an Honours BSc from [the University of King's College](https://ukings.ca/) and [Dalhousie University](https://www.dal.ca/), coincidentally also in Math.  (It's not a coincidence).
 
 An author you say?  I am  also a coauthor of the textbook:  [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/) with Ken Black, Timothy Edmunds and Ignacio Castillo, available via Wiley Publishing.  
 
