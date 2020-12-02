@@ -10,6 +10,8 @@ permalink: /links/
 * If you are interested in learning more about Business Analytics and Data Analytics, [BCIT](https://www.bcit.ca/cea/) has you covered.
 
 ## Some Projects
+- [Excel Fun](https://github.com/amygoldlist/Excel_fun) has my templates for Excel, because Excel is the program that most people use.  These templates are used for mostly teaching.
+
 - [Baby Name selector](https://goldlist.shinyapps.io/Baby_Name_Visualizer/), an R shiny app that let's you explore the popularity of baby names.  If you want to see the code, it's available on [github](https://github.com/amygoldlist/baby_names).
 
 - [Student Performance Prediction](https://github.com/amygoldlist/student_performance_predictions/blob/master/report.md), in which I use some machine learning techniques to see if I can predict math grades based on demographics.  Spoiler: I don't succeed (and I'll argue this is a good thing, because anyone from any background can succeed at learning math).
