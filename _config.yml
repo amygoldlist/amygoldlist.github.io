@@ -23,7 +23,7 @@ description: mathematician, teacher, student, author, parent and data scientist
 # List of links in the navigation bar
 navbar-links:
   About Me: index
-  Blog: 'blog'
+  ##Blog: 'blog'  # I broke this :(
   Links: "links"
   ## I think that I want it to look like:
   ## Blog: "blog"
@@ -56,7 +56,7 @@ link-col: "#cc0000" ## red  "#008AFF"  ##blue
 hover-col: "#0085A1"  ## teal blue
 footer-col: "#697800" ##olive green  "#F5F5F5"
 footer-text-col: "#FFFFE0" #"#404040"  ##charcoal"#777777"  ##gray
-footer-link-col: "#0085A1" ##"#404040"  ##charcoal
+footer-link-col: "#cc0000" ## red  ##"#0085A1" teal ##"#404040"  ##charcoal
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
