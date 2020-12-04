@@ -16,22 +16,17 @@ baseurl:
 # Name of website
 title: Amy Goldlist
 # Short description of your site
-description: mathematician, teacher, student, author, parent and data scientist
+description: Mathematician, Teacher, Student, Author, Parent and Data Scientist
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: index
-  Blog: 'blog'  # I broke this :(
+  Home: index
+  Blog: 'blog'
   Links: "links"
   FAQ: "FAQ"
-  ## I think that I want it to look like:
-  ## Blog: "blog"
-  ## About Me "index"
-  ###  but I need to rename some stuff.   working on it!!
 
-  ## random thing: "link"
 
 
 
