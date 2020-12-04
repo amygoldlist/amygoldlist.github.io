@@ -1,3 +1,10 @@
+---
+layout: page
+title: Amy Goldlist
+subtitle: Frequently Asked Questions
+permalink: /FAQ
+---
+
 ### Frequently Asked Questions:
 
 **I don't get it, you already have a great career! Why did you decide to join the MDS program at UBC?**
