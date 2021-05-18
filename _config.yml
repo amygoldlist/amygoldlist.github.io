@@ -86,7 +86,7 @@ social-network-links:
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
 #  instagram: deanat78
-#  youtube: user/deanat78
+  youtube: https://www.youtube.com/channel/UC6Dzvh0MxrUoqbeL6XfQD3g
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
@@ -99,6 +99,7 @@ share-links-active:
   facebook: true
   google: false
   linkedin: true
+  youtube: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
