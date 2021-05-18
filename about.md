@@ -36,3 +36,4 @@ Note the latte and the mountain!</i></font>
 * [github](https://github.com/amygoldlist)
 * [Links](/links)
 * [Blog](/blog)
+* [youtube](https://www.youtube.com/channel/UC6Dzvh0MxrUoqbeL6XfQD3g)
