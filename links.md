@@ -31,9 +31,17 @@ permalink: /links/
 
 
 
-##  [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/)
+##  Books, Books, Books!
+- [Business Mathematics](https://pressbooks.bccampus.ca/businessmathematics/)
+<h5 align="center">
+  <br>
+<img src="../images/business-math.png" alt = "Business Mathematics cover" width="150">
+<br>
+</h5>
 
-* Did I mention that I wrote a book?  I did!
+- [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/)
+
+
 <h5 align="center">
   <br>
 <img src="../images/essentials.jpg" alt = "Essentials of Business Statistics" width="150">

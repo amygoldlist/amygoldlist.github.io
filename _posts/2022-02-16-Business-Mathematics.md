@@ -5,7 +5,7 @@ title: Business Mathematics, Open Online Textbook
 
 <h5 align="center">
   <br>
-<img src="/images/business-math.png" alt = "image" width="300">
+<img src="/images/business-math.png" alt = "image of textbook cover" width="300">
 <br>
 </h5>
 
