@@ -9,8 +9,11 @@ permalink: /links/
 
 * If you are interested in learning more about Business Analytics and Data Analytics, [BCIT](https://www.bcit.ca/cea/) has you covered.
 
+
 ## Some Projects
 - [Excel Fun](https://github.com/amygoldlist/Excel_fun) has my templates for Excel, because Excel is the program that most people use.  These templates are used for mostly teaching.
+
+- [D2L Exams](https://github.com/amygoldlist/D2L_exams), a project to explore two different methods of creating many versions of random test questions in D2L Brightspace: using R, and using Respondus.  See my blog to learn about [Respondus](https://amygoldlist.github.io/2021-01-15-Exams-in-D2L/) or [R/exams](https://amygoldlist.github.io/2021-03-18-D2L-Exams-part-2/)
 
 - [Baby Name selector](https://goldlist.shinyapps.io/Baby_Name_Visualizer/), an R shiny app that let's you explore the popularity of baby names.  If you want to see the code, it's available on [github](https://github.com/amygoldlist/baby_names).
 
@@ -31,9 +34,17 @@ permalink: /links/
 
 
 
-##  [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/)
+##  Books, Books, Books!
+- [Business Mathematics](https://pressbooks.bccampus.ca/businessmathematics/)
+<h5 align="center">
+  <br>
+<img src="../images/business-math.png" alt = "Business Mathematics cover" width="150">
+<br>
+</h5>
 
-* Did I mention that I wrote a book?  I did!
+- [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/)
+
+
 <h5 align="center">
   <br>
 <img src="../images/essentials.jpg" alt = "Essentials of Business Statistics" width="150">
