@@ -1,11 +1,34 @@
 ---
 layout: page
 title: Amy Goldlist
-subtitle: Frequently Asked Questions
+subtitle: Frequently Asked Questions (updated 2022)
 permalink: /FAQ
 ---
 
-### Frequently Asked Questions:
+## Frequently Asked Questions:
+* [Statistics & Math](#math)
+* [MDS](#mds)
+* [General](#general)
+
+### Statistics & Math
+<a name = "math" ></a>
+
+**You trained in math, right?  So how did you end up teaching Statistics?**
+
+_When I began grad school, I assumed that I was on a number theory research track, however, after teaching during grad school I changed my plans. After leaving graduate school, I took a temporary job in the Math department of BCIT.  I was given a Statistics class to teach as well as my more familiar Calculus.  I had a basic understanding of Statistics from my undergraduate degree, and a strong background in probability theory thanks to my mathematical background, and I dove into learning Statistics._
+
+_To my surprise, a course that was low on my list of priorities became an enduring passion!  Almost ten years and many classes later, I can confidently say that Statistics and Quantitative Methods is a subject close to my heart.  In fact, I love Statistics so much that I wrote a book about it!_
+
+**Talking about the book, why did you write one?  And why with Wiley, and not open source?**
+
+_Oddly enough, writing a book has always been on my list of things I wanted to accomplish in my life.  (Along with reading 1000 books (done!) and travel to each continent (nowhere near done)).  So when the opportunity came up, I decided to act on it.  I also have mixed feelings about the open source world.  While it is incredibly amazing, I feel that sometimes it offloads the true cost of developing content onto other people.  Writing a book takes time, energy, and a lot more people than you'd think.  We had four authors and an amazing editor as well as copywriters, fact checkers, and layout people.  Each chapter has been reviewed multiple times, and the revisions that came out of these reviews really made the final product a clearer and stronger text.  I was lucky to have such a great team at Wiley, and I feel lucky that they have put so much faith into our team._
+
+**Ok, I get that, but since answering the above question, you did contribute to an Open Source book?  Huh?**
+
+_I still feel that people need to be paid for their work!  Luckily, BCIT and BCcampus OpenEd both agree - our team was supported financially by our department, as well as an OpenEd grant.  That made this a win-win situation:  lots of attention by a team, as well as being free and open for students.
+
+### <a name = "mds" > MDS program </a>
+
 
 **I don't get it, you already have a great career! Why did you decide to join the MDS program at UBC?**
 
@@ -21,15 +44,10 @@ _Yes! It was one of the toughest things I've done, and it was a stressful year, 
 
 _Yes!  I mean, only apply for an MDS if you are ready to buckle down and work hard, but there are so many resources out there.  Read a book!  Learn some R!  Master the pivot table functions in Excel!  Understanding how to gather, clean, and analyze data is like having a superpower in the business world._
 
-**You trained in math, right?  So how did you end up teaching Statistics?**
 
-_When I began grad school, I assumed that I was on a number theory research track, however, after teaching during grad school I changed my plans. After leaving graduate school, I took a temporary job in the Math department of BCIT.  I was given a Statistics class to teach as well as my more familiar Calculus.  I had a basic understanding of Statistics from my undergraduate degree, and a strong background in probability theory thanks to my mathematical background, and I dove into learning Statistics._
 
-_To my surprise, a course that was low on my list of priorities became an enduring passion!  Almost ten years and many classes later, I can confidently say that Statistics and Quantitative Methods is a subject close to my heart.  In fact, I love Statistics so much that I wrote a book about it!_
-
-**Talking about the book, why did you write one?  And why with Wiley, and not open source?**
-
-_Oddly enough, writing a book has always been on my list of things I wanted to accomplish in my life.  (Along with reading 1000 books (done!) and travel to each continent (nowhere near done)).  So when the opportunity came up, I decided to act on it.  I also have mixed feelings about the open source world.  While it is incredibly amazing, I feel that sometimes it offloads the true cost of developing content onto other people.  Writing a book takes time, energy, and a lot more people than you'd think.  We had four authors and an amazing editor as well as copywriters, fact checkers, and layout people.  Each chapter has been reviewed multiple times, and the revisions that came out of these reviews really made the final product a clearer and stronger text.  I was lucky to have such a great team at Wiley, and I feel lucky that they have put so much faith into our team._
+### General
+<a name = "general"></a>
 
 **Enough about math!  What do you do in your free time?**
 
