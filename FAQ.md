@@ -5,13 +5,15 @@ subtitle: Frequently Asked Questions (updated 2022)
 permalink: /FAQ
 ---
 
+<a name = "faq"></a>
 ## Frequently Asked Questions:
 * [Statistics & Math](#math)
 * [MDS](#mds)
 * [General](#general)
 
-### Statistics & Math
 <a name = "math" ></a>
+### Statistics & Math
+
 
 **You trained in math, right?  So how did you end up teaching Statistics?**
 
@@ -25,9 +27,12 @@ _Oddly enough, writing a book has always been on my list of things I wanted to a
 
 **Ok, I get that, but since answering the above question, you did contribute to an Open Source book?  Huh?**
 
-_I still feel that people need to be paid for their work!  Luckily, BCIT and BCcampus OpenEd both agree - our team was supported financially by our department, as well as an OpenEd grant.  That made this a win-win situation:  lots of attention by a team, as well as being free and open for students.
+_I still feel that people need to be paid for their work!  Luckily, BCIT and BCcampus OpenEd both agree - our team was supported financially by our department, as well as an OpenEd grant.  That made this a win-win situation:  lots of attention by a team, as well as being free and open for students._
 
-### <a name = "mds" > MDS program </a>
+[BACK TO TOP](#faq)
+
+<a name = "mds" >  </a>
+### MDS program
 
 
 **I don't get it, you already have a great career! Why did you decide to join the MDS program at UBC?**
@@ -44,10 +49,11 @@ _Yes! It was one of the toughest things I've done, and it was a stressful year, 
 
 _Yes!  I mean, only apply for an MDS if you are ready to buckle down and work hard, but there are so many resources out there.  Read a book!  Learn some R!  Master the pivot table functions in Excel!  Understanding how to gather, clean, and analyze data is like having a superpower in the business world._
 
+[BACK TO TOP](#faq)
 
-
-### General
 <a name = "general"></a>
+### General
+
 
 **Enough about math!  What do you do in your free time?**
 
