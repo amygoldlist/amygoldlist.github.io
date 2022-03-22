@@ -1,0 +1,123 @@
+jigsaw lookat
+================
+Amy Goldlist
+24/02/2022
+
+## Jigsaw Puzzle Problem
+
+Lately, I’ve been playing a lot of jigsaw puzzles on my phone. One day,
+I noticed that when I started assembling the puzzle, focusing on the
+edges, I usually see two matching pieces next to each other. What are
+the odds? I marveled.
+
+And so, I obviously needed to calculate that. First, I ran a simple
+simulation, to check some experimental results. My favourite difficulty
+level of puzzle is a 15 by 15 puzzle which contains 225 pieces, of which
+58 are edge pieces (feel free to count\!). I started by asking: If I
+reorder the numbers between 1 and n, what is the probability that my
+sequence contains at least one consecutive pair? (Here \(n\) = 58) I ran
+this with different \(n\) values, and discovered that once \(n\) got big
+enough (say 10 or more), it seemed to always give and answer between 85%
+and 90%. Interesting. But it must depend on \(n\), yes?
+
+For the sake of ease, I decided to not worry about the fact that my
+edges actually form a chain â that is, piece 1 is next to piece 2. I’ll
+correct that at the end. \[Note to Amy: Correct\].
+
+First, Note: \* There are \(n!\) possible orderings of \(n\) objects. \*
+There are \(n\) consecutive pairs \[note \(n-1\) if 1 isn’t next to
+\(n\)\] \* There are \(n \choose 2\) (n choose 2) possible pairs,
+
+So:
+\[\text{Number of possible pairs} = \frac{n!}{2(n-2)!}= \frac{n(n-1)}{2}\]
+So, if I choose 2 pieces at random, the odds of them being consecutive
+are:
+
+\[P(match)= \frac{\text{#  Consecutive pairs}}{\text{total possible pairs}} = \frac{n}{\left(\frac{n(n-1)}{2}\right)} = \frac{2}{n-1}\]
+
+Now, back to the puzzle: We are working in a binomial distribution with:
+\(n-1\) as the number of trials (that is, the number of possible pairs
+in my sequence) \(\pi= \frac{2}{n-1}\) is the probability of success:
+And I am looking for \(P(X \geq 0) = 1- P(X =0)\):
+
+So:
+\[1-(n-1)C0 \times \frac{2}{n-1}^0 \left(1-\frac{2}{n-1}\right)^{n-1}\]
+\[ =  \left(1-\frac{2}{n-1}\right)^{n-1}\] For n = 58, we have:
+\[P = 1- \left(1-\frac{2}{57}\right)^{57} = 0.8694411\]
+
+``` r
+1-(1-2/57)^57
+```
+
+    ## [1] 0.8694411
+
+But what if \(n\) is big? Now we have
+\[lim_{n \rightarrow \infty} = 1- \left(1-\frac{2}{n-1}\right)^{n-1} = 1-e^{-2}=0.8646647\]
+
+``` r
+1-exp(-2)
+```
+
+    ## [1] 0.8646647
+
+Around 87%.
+
+### Part 2: The whole puzzle
+
+As I proudly presented this to my family at dinner time, my kid wisely
+asked: “What about the whole puzzle? Not just the edges? Puzzle pieces
+touch 4 others - so would you multiply the answer by 4?”
+
+Good question kid\! No, but as it turns out - close\!
+
+Let’s start with an \(n\) by \(m\) puzzle. This puzzle has
+\(n(m-1)+m(n-1)\) possible matches. Confused? Look at this nice image:
+
+\[image\]
+
+So we have the following numbers:
+
+  - \(n\) columns and \(m\) rows
+  - \(m\times n = mn\) total pieces
+  - When we display the pieces in a rwo, there are \(nm-1\) possible
+    pairs.
+  - There are \(n(m-1)+m(n-1) = 2mn-n-m\) total pairings of pieces that
+    fit together.
+  - There are \(mn \choose 2 = \frac{mn(mn-1)}{2}\) possible pairings.
+
+That means that if I select 2 pieces at random, the probability that
+they are pairs (ie, they fit together) is:
+
+\[P(fit)= p = \frac{2(2mn-n-m)}{mn(mn-1)}\]
+
+So let’s fit that into our same binomial distribution:
+
+\[P(X>0)=$P(X \geq 0) = 1- P(X =0)\]
+
+So:
+\[1- ({(mn-1)\choose {0} }\times \frac{2(2mn-n-m)}{mn(mn-1)}^0 \left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1}=1-\left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1}\]
+
+For my 15 by 15 puzzle, (ie, \(m=n=15\)), we have:
+
+So:
+\[1- \left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1} =\left(1-\frac{2(420)}{225(224)}\right)^{224} = 0.9768276\]
+
+``` r
+1-(1-(2*(2*225-30))/(225*224))^(224)
+```
+
+    ## [1] 0.9768276
+
+But I like to generalize\! Let’s say this is a really big puzzle. For
+simplicity’s sake, let’s make it an \(n\) by \(n\) square. As \(n\)
+grows large, we have:
+
+\[lim_{n \rightarrow \infty}  1- \left(1-\frac{4}{n(n-1)}\right)^{n^2-1} = 1-e^{-4}=0.8646647\]
+
+``` r
+1-exp(-4)
+```
+
+    ## [1] 0.9816844
+
+So in this case, I really would expect to see at least one match\!
