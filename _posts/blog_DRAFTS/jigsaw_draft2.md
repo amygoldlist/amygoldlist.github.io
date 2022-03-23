@@ -77,7 +77,7 @@ Repeat_experiment <- function(n,reps=1000){
 Repeat_experiment(58)$proportion
 ```
 
-    ## [1] 0.859
+    ## [1] 0.855
 
 I ran this with different \(n\) values, and discovered that once \(n\)
 got big enough (say 10 or more), it seemed to always give and answer
@@ -86,64 +86,34 @@ between 85% and 90%. Interesting. But it must depend on \(n\), yes?
 Just for fun, let’s try a few values of \(n\):
 
 ``` r
-print("n is 50:")
-```
-
-    ## [1] "n is 50:"
-
-``` r
 Repeat_experiment(50)$proportion
 ```
 
-    ## [1] 0.88
-
-``` r
-print("n is 100:")
-```
-
-    ## [1] "n is 100:"
+    ## [1] 0.879
 
 ``` r
 Repeat_experiment(100)$proportion
 ```
 
-    ## [1] 0.882
-
-``` r
-print("n is 500:")
-```
-
-    ## [1] "n is 500:"
+    ## [1] 0.873
 
 ``` r
 Repeat_experiment(500)$proportion
 ```
 
-    ## [1] 0.868
-
-``` r
-print("n is 1000:")
-```
-
-    ## [1] "n is 1000:"
+    ## [1] 0.869
 
 ``` r
 Repeat_experiment(1000)$proportion
 ```
 
-    ## [1] 0.874
-
-``` r
-print("n is 10,000:")
-```
-
-    ## [1] "n is 10,000:"
+    ## [1] 0.869
 
 ``` r
 Repeat_experiment(10000)$proportion
 ```
 
-    ## [1] 0.866
+    ## [1] 0.851
 
 ### Step 3: Find a probabilistic answer
 

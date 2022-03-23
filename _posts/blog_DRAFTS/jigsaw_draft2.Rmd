@@ -75,19 +75,19 @@ I ran this with different $n$ values, and discovered that once $n$ got big enoug
 Just for fun, let's try a few values of $n$:
 
 ```{r}
-print("n is 50:")
+
 Repeat_experiment(50)$proportion
 
-print("n is 100:")
+
 Repeat_experiment(100)$proportion
 
-print("n is 500:")
+
 Repeat_experiment(500)$proportion
 
-print("n is 1000:")
+
 Repeat_experiment(1000)$proportion
 
-print("n is 10,000:")
+
 Repeat_experiment(10000)$proportion
 
 ```
