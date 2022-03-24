@@ -1,7 +1,7 @@
-jigsaw lookat
-================
-Amy Goldlist
-24/02/2022
+---
+layout: post
+title: A jigsaw Puzzle Problem
+---
 
 ## Jigsaw Puzzle Problem
 
@@ -19,7 +19,13 @@ playing jigsaw puzzles on my phone. One day, I noticed that when looking
 at only the edge pieces, I could see two pieces that were obviously a
 match next to each other.
 
-IMAGE
+<h5 align="center">
+
+<br>
+<img src="/images/jigsaw_images/edges.png" alt = "image of edge pieces" width="300">
+<br>
+
+</h5>
 
 I realized that this wasn’t the first time - I usually see two matching
 pieces next to each other. What are the odds? I marveled.
@@ -36,6 +42,14 @@ my sequence contains at least one consecutive pair? (In my favourite
 case, \(n\) = 58).
 
 ### Step 2: Run a simulation to find experimental results.
+
+<h5 align="center">
+
+<br>
+<img src="/images/jigsaw_images/IMG_3446.PNG" alt = "image of puzzle" width="300">
+<br>
+
+</h5>
 
 Sometimes it’s a good idea to create a simulation and run several
 repetitions. You can use any method for this, and honestly, it’s easy to
@@ -77,7 +91,7 @@ Repeat_experiment <- function(n,reps=1000){
 Repeat_experiment(58)$proportion
 ```
 
-    ## [1] 0.855
+    ## [1] 0.856
 
 I ran this with different \(n\) values, and discovered that once \(n\)
 got big enough (say 10 or more), it seemed to always give and answer
@@ -89,33 +103,41 @@ Just for fun, let’s try a few values of \(n\):
 Repeat_experiment(50)$proportion
 ```
 
-    ## [1] 0.879
+    ## [1] 0.86
 
 ``` r
 Repeat_experiment(100)$proportion
 ```
 
-    ## [1] 0.873
+    ## [1] 0.872
 
 ``` r
 Repeat_experiment(500)$proportion
 ```
 
-    ## [1] 0.869
+    ## [1] 0.879
 
 ``` r
 Repeat_experiment(1000)$proportion
 ```
 
-    ## [1] 0.869
+    ## [1] 0.857
 
 ``` r
 Repeat_experiment(10000)$proportion
 ```
 
-    ## [1] 0.851
+    ## [1] 0.858
 
 ### Step 3: Find a probabilistic answer
+
+<h5 align="center">
+
+<br>
+<img src="/images/jigsaw_images/IMG_3447.PNG" alt = "image of puzzle" width="300">
+<br>
+
+</h5>
 
 First, we need a bit of math. I’ve treated each puzzle piece as a number
 between 1 and \(n\), assembling the pieces in a straight line. If I
@@ -175,6 +197,14 @@ Around 87%.
 
 ### Step 4: Generalize a bit
 
+<h5 align="center">
+
+<br>
+<img src="/images/jigsaw_images/IMG_3449.PNG" alt = "image of puzzle" width="300">
+<br>
+
+</h5>
+
 As I proudly presented this to my family at dinner time, my kid wisely
 asked: “What about the whole puzzle? Not just the edges? Puzzle pieces
 touch four others - so would you multiply the answer by 4?”
@@ -185,7 +215,13 @@ of those puzzle pieces really helped them be tuned into jigsaw puzzles.
 Let’s start with an \(n\) by \(m\) puzzle. This puzzle has
 \(n(m-1)+m(n-1)\) possible matches. Confused? Look at this nice image:
 
-IMAGE
+<h5 align="center">
+
+<br>
+<img src="/images/jigsaw_images/IMG_3450.PNG" alt = "image of puzzle" width="300">
+<br>
+
+</h5>
 
 So we have the following numbers:
 
@@ -235,6 +271,14 @@ grows large, we have:
 So in this case, I really would expect to see at least one match\!
 
 ### Conclusion
+
+<h5 align="center">
+
+<br>
+<img src="/images/jigsaw_images/IMG_3451.PNG" alt = "image of puzzle" width="300">
+<br>
+
+</h5>
 
 One conclusion is “Amy\! You have too much time on your hands\! Don’t
 you have enough actual work to do?” I do, but sometimes it can be fun

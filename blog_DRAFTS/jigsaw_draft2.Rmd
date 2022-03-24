@@ -15,7 +15,11 @@ When life gets stressful, one of the most relaxing activities is something where
 
 Luckily, technology has caught up, and now I happily spend my downtime playing  jigsaw puzzles on my phone.  One day, I noticed that when looking at only the edge pieces, I could see two pieces that were obviously a match next to each other.
 
-IMAGE
+<h5 align="center">
+  <br>
+<img src="/images/jigsaw_images/edges.png" alt = "image of edge pieces" width="300">
+<br>
+</h5>
 
 I realized that this wasn't the first time -  I usually see two matching pieces next to each other.  What are the odds? I marveled.
 
@@ -28,6 +32,12 @@ My favourite difficulty level of jigsaw puzzle is a 15 by 15 puzzle which contai
 
 
 ### Step 2: Run a simulation to find experimental results.
+
+<h5 align="center">
+  <br>
+<img src="/images/jigsaw_images/IMG_3446.PNG" alt = "image of puzzle" width="300">
+<br>
+</h5>
 
 Sometimes it's a good idea to create a simulation and run several repetitions.  You can use any method for this, and honestly, it's easy to sometimes just use Excel to run some quick simulations.  I'm writing this in R, so I might as well use that:
 
@@ -94,6 +104,11 @@ Repeat_experiment(10000)$proportion
 
 
 ### Step 3: Find a probabilistic answer
+<h5 align="center">
+  <br>
+<img src="/images/jigsaw_images/IMG_3447.PNG" alt = "image of puzzle" width="300">
+<br>
+</h5>
 
 First, we need a bit of math.  I've treated each puzzle piece as a number between 1 and $n$, assembling the pieces in a straight line. If I wanted to be 100% correct, I would have done the above work modulo $n$, that is, note that $n$ is next to 1.  But that should not make a big difference.  Mathematically, we have the following:
 
@@ -147,13 +162,23 @@ Around 87%.
 
 ### Step 4: Generalize a bit
 
+<h5 align="center">
+  <br>
+<img src="/images/jigsaw_images/IMG_3449.PNG" alt = "image of puzzle" width="300">
+<br>
+</h5>
+
 As I proudly presented this to my family at dinner time, my kid wisely asked: "What about the whole puzzle?  Not just the edges?  Puzzle pieces touch four others - so would you multiply the answer by 4?"
 
 Good question kid!  No, but as it turns out - close!  I guess eating all of those puzzle pieces really helped them be tuned into jigsaw puzzles.
 
 Let's start with an $n$ by $m$ puzzle.  This puzzle has $n(m-1)+m(n-1)$ possible matches.  Confused? Look at this nice image:
 
-IMAGE
+<h5 align="center">
+  <br>
+<img src="/images/jigsaw_images/IMG_3450.PNG" alt = "image of puzzle" width="300">
+<br>
+</h5>
 
 So we have the following numbers:
 
@@ -197,6 +222,12 @@ But I like to generalize!  Let's say this is a really big puzzle.  For simplicit
 So in this case, I really would expect to see at least one match!
 
 ### Conclusion
+
+<h5 align="center">
+  <br>
+<img src="/images/jigsaw_images/IMG_3451.PNG" alt = "image of puzzle" width="300">
+<br>
+</h5>
 
 One conclusion is "Amy! You have too much time on your hands! Don't you have enough actual work to do?" I do, but sometimes it can be fun and satisfying to take a small question, and expand it to a larger question.  Did I learn something about jigsaw puzzles? Probably not, but I did have a lot of fun!
 
