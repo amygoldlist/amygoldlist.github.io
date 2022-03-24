@@ -1,7 +1,7 @@
----
-layout: post
-title: A jigsaw Puzzle Problem
----
+jigsaw lookat
+================
+Amy Goldlist
+24/02/2022
 
 ## Jigsaw Puzzle Problem
 
@@ -91,7 +91,7 @@ Repeat_experiment <- function(n,reps=1000){
 Repeat_experiment(58)$proportion
 ```
 
-    ## [1] 0.856
+    ## [1] 0.871
 
 I ran this with different \(n\) values, and discovered that once \(n\)
 got big enough (say 10 or more), it seemed to always give and answer
@@ -103,31 +103,31 @@ Just for fun, let’s try a few values of \(n\):
 Repeat_experiment(50)$proportion
 ```
 
-    ## [1] 0.86
+    ## [1] 0.854
 
 ``` r
 Repeat_experiment(100)$proportion
 ```
 
-    ## [1] 0.872
+    ## [1] 0.864
 
 ``` r
 Repeat_experiment(500)$proportion
 ```
 
-    ## [1] 0.879
+    ## [1] 0.872
 
 ``` r
 Repeat_experiment(1000)$proportion
 ```
 
-    ## [1] 0.857
+    ## [1] 0.866
 
 ``` r
 Repeat_experiment(10000)$proportion
 ```
 
-    ## [1] 0.858
+    ## [1] 0.865
 
 ### Step 3: Find a probabilistic answer
 

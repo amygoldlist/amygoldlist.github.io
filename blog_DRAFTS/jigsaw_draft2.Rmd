@@ -2,7 +2,9 @@
 title: "jigsaw lookat"
 author: "Amy Goldlist"
 date: "24/02/2022"
-output: github_document
+output: 
+  github_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
