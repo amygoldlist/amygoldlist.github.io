@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A jigsaw Puzzle Problem
+title: A Jigsaw Puzzle Problem
 mathjax: true
 ---
  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
@@ -154,11 +154,11 @@ big difference. Mathematically, we have the following:
 
 Thus:
 
-\[\text{Number of possible pairs}= {n \choose 2} = \frac{n!}{2(n-2)!}= \frac{n(n-1)}{2}\]
+$$\text{Number of possible pairs}= {n \choose 2} = \frac{n!}{2(n-2)!}= \frac{n(n-1)}{2}$$
 If I choose two pieces at random, the odds of them being consecutive
 are:
 
-\[P(\text{match})= \frac{\text{#  Consecutive pairs}}{\text{total possible pairs}} = \frac{n}{\left(\frac{n(n-1)}{2}\right)} = \frac{2}{n-1}\]
+$$P(\text{match})= \frac{\text{#  Consecutive pairs}}{\text{total possible pairs}} = \frac{n}{\left(\frac{n(n-1)}{2}\right)} = \frac{2}{n-1}$$
 
 Back to the puzzle:
 
@@ -170,11 +170,11 @@ We are working in a binomial distribution with the following parameters:
   - I am looking for $P(X \geq 0) = 1- P(X =0)$:
 
 So:
-\[1-{(n-1)\choose 0} \times \left(\frac{2}{n-1}\right)^0 \left(1-\frac{2}{n-1}\right)^{n-1}\]
-\[ =  \left(1-\frac{2}{n-1}\right)^{n-1}\]
+$$1-{(n-1)\choose 0} \times \left(\frac{2}{n-1}\right)^0 \left(1-\frac{2}{n-1}\right)^{n-1}\]
+\[ =  \left(1-\frac{2}{n-1}\right)^{n-1}$$
 
 For n = 58, we have:
-\[P = 1- \left(1-\frac{2}{57}\right)^{57} = 0.8694411\]
+$$P = 1- \left(1-\frac{2}{57}\right)^{57} = 0.8694411$$
 
 ``` r
 1-(1-2/57)^57
@@ -186,7 +186,7 @@ But what if $n$ is big?
 
 Now we have:
 
-\[lim_{n \rightarrow \infty} = 1- \left(1-\frac{2}{n-1}\right)^{n-1} = 1-e^{-2}=0.8646647\]
+$$lim_{n \rightarrow \infty} = 1- \left(1-\frac{2}{n-1}\right)^{n-1} = 1-e^{-2}=0.8646647$$
 
 ``` r
 1-exp(-2)
@@ -214,7 +214,7 @@ Good question kid! No, but as it turns out - close! I guess eating all
 of those puzzle pieces really helped them be tuned into jigsaw puzzles.
 
 Let’s start with an $n$ by $m$ puzzle. This puzzle has
-\(n(m-1)+m(n-1)\) possible matches. Confused? Look at this nice image:
+$n(m-1)+m(n-1)$ possible matches. Confused? Look at this nice image:
 
 <h5 align="center">
 
@@ -237,19 +237,19 @@ So we have the following numbers:
 That means that if I select two pieces at random, the probability that
 they are pairs (ie, they fit together) is:
 
-\[P(\text{fit})= \pi = \frac{2(2mn-n-m)}{mn(mn-1)}\]
+$$P(\text{fit})= \pi = \frac{2(2mn-n-m)}{mn(mn-1)}$$
 
 So let’s fit that into a similar binomial distribution:
 
-\[P(X>0)=$P(X \geq 0) = 1- P(X =0)\]
+$$P(X>0)=$P(X \geq 0) = 1- P(X =0)$$
 
 Thus:
-\[1- {(mn-1)\choose {0} }\times \frac{2(2mn-n-m)}{mn(mn-1)}^0 \left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1}=1-\left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1}\]
+$$1- {(mn-1)\choose {0} }\times \frac{2(2mn-n-m)}{mn(mn-1)}^0 \left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1}=1-\left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1}$$
 
 For my 15 by 15 puzzle, (ie, \(m=n=15\)), we have:
 
 So:
-\[1- \left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1} =\left(1-\frac{2(420)}{225(224)}\right)^{224} = 0.9768276\]
+$$1- \left(1-\frac{2(2mn-n-m)}{mn(mn-1)}\right)^{mn-1} =\left(1-\frac{2(420)}{225(224)}\right)^{224} = 0.9768276$$
 
 ``` r
 1-(1-(2*(2*225-30))/(225*224))^(224)
