@@ -170,8 +170,9 @@ We are working in a binomial distribution with the following parameters:
   - I am looking for $P(X \geq 0) = 1- P(X =0)$:
 
 So:
-$$1-{(n-1)\choose 0} \times \left(\frac{2}{n-1}\right)^0 \left(1-\frac{2}{n-1}\right)^{n-1}\]
-\[ =  \left(1-\frac{2}{n-1}\right)^{n-1}$$
+
+$$1-{(n-1)\choose 0} \times \left(\frac{2}{n-1}\right)^0 \left(1-\frac{2}{n-1}\right)^{n-1}
+ =  \left(1-\frac{2}{n-1}\right)^{n-1}$$
 
 For n = 58, we have:
 $$P = 1- \left(1-\frac{2}{57}\right)^{57} = 0.8694411$$
@@ -232,7 +233,7 @@ So we have the following numbers:
     pairs.
   - There are $n(m-1)+m(n-1) = 2mn-n-m$ total pairings of pieces that
     fit together.
-  - There are $mn \choose 2 = \frac{mn(mn-1)}{2}$ possible pairings.
+  - There are ${mn \choose 2} = \frac{mn(mn-1)}{2}$ possible pairings.
 
 That means that if I select two pieces at random, the probability that
 they are pairs (ie, they fit together) is:
@@ -261,7 +262,7 @@ But I like to generalize! Let’s say this is a really big puzzle. For
 simplicity’s sake, let’s make it an $n$ by $n$ square. As $n$
 grows large, we have:
 
-\[lim_{n \rightarrow \infty}  1- \left(1-\frac{4}{n(n-1)}\right)^{n^2-1} = 1-e^{-4}=0.8646647\]
+$$lim_{n \rightarrow \infty}  1- \left(1-\frac{4}{n(n-1)}\right)^{n^2-1} = 1-e^{-4}=0.8646647$$
 
 ``` r
 1-exp(-4)
