@@ -55,8 +55,9 @@ You may want to use built in Excel commands to create 100 versions of the same q
 
 ## Method 1: Microsoft only (mail merge option)
 This method is incredibly straightforward, and it took me very little time to put together, once I understood the file structure.
-1. Fill out the Excel file (or create your own).  You may leave the Hint and Feedback empty, if you'd like
+1. Fill out the Excel file (or create your own).  You may leave the Hint and Feedback empty, if you'd like.
 2. Open up the Word mail merge, and make sure that it is attached to the Excel file.  If not, use the mail merge wizard, and link it.  It should look something like this:
+
 ```
 <item d2l_2p0:id="«N»" ident="OBJ_«N»" label="QUES_«N»" d2l_2p0:page="1" title=«Title»>
 <itemmetadata>
@@ -66,7 +67,11 @@ This method is incredibly straightforward, and it took me very little time to pu
 			<fieldentry>yes</fieldentry>
 		</qti_metadatafield>
 ```
+
+
 3. Complete your Mailmerge, `Mailings | Finish and Merge | Print Documents`.  The top should look something like this:
+
+
 ```
 <item d2l_2p0:id="1001" ident="OBJ_1001" label="QUES_1001" d2l_2p0:page="1" title=adding 2>
 <itemmetadata>
@@ -83,6 +88,8 @@ This method is incredibly straightforward, and it took me very little time to pu
 
 4. Select all and copy (`Ctrl-A Ctrl-C`).
 5. Open up the file `mail_merge_upload\questiondm.xml` in a program that you can write to - I've been using WordPad, but a simple text reader should work just find.  This is the preamble, or section information.  If you want, you can manually change the title, it's in the 4th line, in all-caps.  You can also move 5 rows down, and change the attribution to your own name (as opposed to `Created by Me`)
+
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <questestinterop>
@@ -129,6 +136,7 @@ Not going to lie, the mail merge method is quick and satisfying.  But, I reasone
 ## Using the R file:
 1. Step 1, Fill out the Excel file (or create your own).  You may leave the Hint and Feedback empty.
 2. Alternatively: Use any R code you'd like to create a dataframe with your own questions in it:
+
 ```
 df <- data.frame("N"= integer(),
                  "Question"= character(),
@@ -139,6 +147,7 @@ df <- data.frame("N"= integer(),
                  "Hint" = character(),
                  "feedback" = character())
 ```
+
 3. You can modify the R script, changing the `file_name` or the data file.
 4. Run!  You should now have a new folder with 2 xml files in it.  Zip them!  
 5. Upload.
