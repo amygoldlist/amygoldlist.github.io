@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Quiz Questions in D2L Brightspace part 3, Arithmetic Questions in 2 ways
+mathjax: true
 ---
+ <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 *This Project lives [on Github](https://github.com/amygoldlist/D2L_exams)*
 
