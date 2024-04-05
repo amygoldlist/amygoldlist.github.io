@@ -1,0 +1,81 @@
+---
+layout: post
+title: Business Analytics Methods- A new Framework
+mathjax: true
+---
+
+
+<h5 align="center">
+
+<br>
+<img src="/images/Whiteboard.jpeg" alt = "image of my whiteboard" width="300">
+<br>
+
+</h5>
+
+
+## Why?
+
+
+In the past six years, my professional life has been increasingly immersed in the realm of Machine Learning (ML). Despite my background as a Mathematician, I leaned into Machine Learning during my MDS (Masters of Data Science) studies. These recent years have witnessed remarkable strides in AI and ML, exemplified by the transformative impact of ChatGPT within just 18 months of its launch. Professionally, I assumed the role of program head for the Grad Certificate in Business Analytics, dedicating significant effort to refining and updating the curriculum. Additionally, my involvement in the AI Management track for the IT Management diploma means that I spend a lot of my working time explaining the role of Machine Learning in modern business practices.
+
+An interesting moment occurred when I had the opportunity to teach a graduate class at UBC focused on Analytics, tailored for Economics students. To my surprise, I encountered resistance. The principles I advocated, emphasizing the elegance and strength of parsimonious models, clashed with the complex models aiming to capture as many variables as possible that they learned in Econometrics. Despite my insistence on simplicity for robust modeling, skepticism prevailed.
+
+The students insisted about the necessity of incorporating more features to enhance comprehension and understand all possible explanations. Even when we explored techniques like Feature Engineering using Principal Component Analysis, confusion lingered.
+
+Reflecting on this class prompted me to reevaluate my approach. I am trying to bridge the divide between traditional statistical and economic methodologies and contemporary data-driven techniques. Thus, I embarked on crafting a framework that synthesizes these disparate methods, grounded in the foundational principles of Business Analytics. Drawing inspiration from the four stages of Business Analytics, I devised this framework anchored in two fundamental elements: Timeframe and Action Type. This has been clarified with my AI students, who helped me to refine my approach. This framework serves as a guiding compass, enabling a nuanced understanding and application of diverse analytical methods.
+
+In essence, my journey has led me to develop a framework that seeks to reconcile traditional paradigms with emerging methodologies, facilitating a holistic approach to data analysis and decision-making.
+
+
+### The four types of Business Analytics
+
+1. **Descriptive Analytics**: What is happening now, why is that?
+2. **Diagnostic Analytics**: What could I be doing differently?
+3. **Predictive Analytics**: What will happen?
+4. **Prescriptive Analytics**: What should we do?
+
+#### A motivating matrix:
+We ask two important questions:
+* What timeframe are we looking at.  Are we looking at the Past or Present?  Or are we looking towards the Future?  In other words, am I looking at the Current State, or the Future State?
+
+* What are we looking to do?  Are we looking to *Act* on what we have learned?  Or are we looking to simply *understand*?  The methods that we use are going to depend on what we will do with what we learn:
+
+<h5 align="center">
+<br>
+
+|         | Past and Present     | Future |
+|--------------|-----------|------------|
+| **Understanding** |    Descriptive Analytics   | Predictive Analytics       |
+| **Action**     | Diagnostic Analytics  | Prescriptive Analytics       |
+
+<br>
+</h5>
+
+### Understanding versus Action
+
+This lies at the heart of the choice between classical methods and ML methods.  When we are creating a model, we are looking to learn something. Let's go for an example.  Say I am trying to predict sales of swimwear in Canada.
+
+## Classical Methods are grounded in understanding and explaining:
+
+#### Descriptive Analytics:
+This is the type of thing you learned about in Statistics - we summarize data by finding the Mean, Median or Mode, we find the standard deviation or InterQuertile Range, we graph the data.  I'm being very glib here, this is a lot of what I spend my time on (see: The textbook I wrote on Statistics).
+Here, I can compare my various variables (features in ML).  Do floral swimsuits sell better when the weather is good? When the economy is bad?  This is a lot of where econometrics lies - in exploring what factors affect each other.
+
+
+#### Predictive Analytics
+ In a classical Holt-Winters Timeseries forecast, we create a model which predicts future events (FUTURE/ UNDERSTANDING).  It can tell us what will happen, but the model is more than the predictions which it spits out.  The model itself gives us important information.  It gives us three factors: The Trend (Are we increasing or decreasing, on average, in the long term?), Seasonality, (Is it periodic over a small amount of time?) and Cyclical (is there a second, longer periodicity?).
+
+ Our Holt-Winters model might give us:
+* There is an upwards trend in Sales, that is, our Sales are overall increasingly
+* Sales of swimsuits have a strong seasonal trend - Over a year, sales are highest in Spring and Summer, but drop in Fall and Winter.
+* Cyclical: Swimwear styles change, and over many years a specific model (say floral patterns) will become trendy, than drop again.
+
+## ML methods are grounded in application
+And can be a bit of a black box around understanding.
+
+#### Diagnostic Analytics
+Maybe my floral-patterned swimsuits just haven't been selling.  In descriptive Analytics, we explored why that might be, but now what I want to know is what should I have done.  Should I have sold striped swimsuits?  Parkas instead?  Given the current state, what should I have done?  Here, it's enough to come up with an option, it's less important that we understand the root causes.  (And yes, I know I'm twisting this just a bit to fit my model.  Bear with me!)
+
+#### Prescriptive Analytics
+This is where ML really shines.  It says, "What should we do?"  A neural network can accurately predict future sales, but unlike the Holt-Winter's model, it doesn't tell us anything about why.  It just gives us the tools to act. 
