@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Business Analytics Methods- A new Framework
+title: Business Analytics Strategy- A new Framework
 mathjax: true
 ---
 
@@ -78,4 +78,4 @@ And can be a bit of a black box around understanding.
 Maybe my floral-patterned swimsuits just haven't been selling.  In descriptive Analytics, we explored why that might be, but now what I want to know is what should I have done.  Should I have sold striped swimsuits?  Parkas instead?  Given the current state, what should I have done?  Here, it's enough to come up with an option, it's less important that we understand the root causes.  (And yes, I know I'm twisting this just a bit to fit my model.  Bear with me!)
 
 #### Prescriptive Analytics
-This is where ML really shines.  It says, "What should we do?"  A neural network can accurately predict future sales, but unlike the Holt-Winter's model, it doesn't tell us anything about why.  It just gives us the tools to act. 
+This is where ML really shines.  It says, "What should we do?"  A neural network can accurately predict future sales, but unlike the Holt-Winter's model, it doesn't tell us anything about why.  It just gives us the tools to act.  Though we can use Classical Models, we can often get better performance from a Black box
