@@ -8,7 +8,7 @@ mathjax: true
 <h5 align="center">
 
 <br>
-<img src="/images/strategy/chatGPT.png" alt = "ChatGPT: fun, but not perfect" width="300">
+<img src="/images/strategy/chatGPT.png" alt = "ChatGPT: fun, but not perfect" width="500">
 <br>
 
 </h5>
