@@ -84,7 +84,7 @@ Here, I can compare my various variables (features in ML).  Do floral swimsuits 
 <h5 align="center">
 
 <br>
-<img src="/images/timeseries.png" alt = "prediction" width="300">
+<img src="/images/strategy/timeseries.png" alt = "prediction" width="300">
 <br>
 
 </h5>
