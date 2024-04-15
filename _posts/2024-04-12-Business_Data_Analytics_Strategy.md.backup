@@ -38,6 +38,7 @@ In essence, my journey has led me to develop a framework that seeks to reconcile
 
 
 ## The four strategies of Business Analytics
+
 <h5 align="center">
 
 <br>
