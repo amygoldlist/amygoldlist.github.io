@@ -13,11 +13,15 @@ permalink: /
 
 Hi! I'm Amy Goldlist, and I'm a mathematician, teacher, student, author, parent and data scientist.
 
- I'm a faculty member in Operations Management in the School of Business at the British Columbia Institute of Technology, [BCIT](https://www.bcit.ca/business/), where I am Program Head of [AI Manangement](https://www.bcit.ca/programs/business-information-technology-management-artificial-intelligence-management-option-diploma-full-time-623adipma/). 
+ I'm a faculty member in Operations Management in the School of Business at the British Columbia Institute of Technology, [BCIT](https://www.bcit.ca/business/), where I am currently Program Head of [AI Manangement](https://www.bcit.ca/programs/business-information-technology-management-artificial-intelligence-management-option-diploma-full-time-623adipma/). 
 
  I have an [MDS](https://ubc-mds.github.io/) (Masters of Data Science) from [UBC](https://www.ubc.ca/), where incidentally I also received my MSc in Mathematics (Algebraic Number Theory) years ago.  I have an Honours BSc from [the University of King's College](https://ukings.ca/) and [Dalhousie University](https://www.dal.ca/), coincidentally also in Math.  (It's not a coincidence).
 
 An author you say?  I am  also a coauthor of the textbook:  [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/) with Ken Black, Timothy Edmunds and Ignacio Castillo, available via Wiley Publishing.  
+
+But wait, there's more!  Check out this open textbook [Business Mathematics](https://pressbooks.bccampus.ca/businessmathematics/) which I edited with many colleagues.
+
+This open textbook [Business Analytics](https://pressbooks.bccampus.ca/businessanalytics/) is just written by me, but needs some work.....
 
 I live in Vancouver, British Columbia with my family.
 

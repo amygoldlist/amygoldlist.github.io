@@ -8,6 +8,7 @@ permalink: /FAQ
 <a name = "faq"></a>
 ## Frequently Asked Questions:
 * [Statistics & Math](#math)
+* [AI Management](#aim)
 * [MDS](#mds)
 * [General](#general)
 
@@ -28,6 +29,18 @@ _Oddly enough, writing a book has always been on my list of things I wanted to a
 **Ok, I get that, but since answering the above question, you did contribute to an Open Source book?  Huh?**
 
 _I still feel that people need to be paid for their work!  Luckily, BCIT and BCcampus OpenEd both agree - our team was supported financially by our department, as well as an OpenEd grant.  That made this a win-win situation:  lots of attention by a team, as well as being free and open for students._
+
+[BACK TO TOP](#faq)
+
+<a name = "aim" >  </a>
+### AI Management
+
+**I distinctly heard you say that once your term for Business Analytics Program Head ended, you wouldn't try to be a Program Head anymore.  What gives?**
+_Good question!  When the opportunity came up, I couldn't turn it down, it seemed like a real opportunity_
+
+**But you are always so mad at AI?  Aren't you an AI sceptic?**
+
+_Who better to teach AI?  Anyone can be an AI cheerleader, and blithely allow ChatGPT or Google Gemini to access their IP, without considering the harms that could happen.  AI is the future, and it is incredibly powerful, but we need to work with its limitation, and really approach it cautiously.  I hope that we can graduate students who are optimists - Expect the best, prepare for the worst.
 
 [BACK TO TOP](#faq)
 
@@ -61,8 +74,7 @@ _Well, I'm a parent who works full time and just finished an intensive graduate 
 
 **You said you paint, can I buy one of your paintings?**
 
-_Sure!  Check out my art [here](https://knockoffart.blogspot.com/)._
-
+_Sure!  Check out my art [here](https://knockoffart.blogspot.com/).  I do not update this, but I do have an [instragram](https://www.instagram.com/knock_off_artist/).  Check it out!_
 
 **Do you consult?**
 
