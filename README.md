@@ -9,8 +9,7 @@
 </h5>
 
 Hi! I'm Amy Goldlist, and I'm a mathematician, teacher, student, author, parent and data scientist.
-
-Currently, I'm on leave from my faculty position in Operations Management in the School of Business at BCIT (British Columbia Institute of Technology.)  I'm currently completing an MDS (Masters of Data Science) at UBC, (where incidentally I received my MSc in Mathematics years ago.)
+I am faculty in Operations Management in the School of Business + Media at BCIT (British Columbia Institute of Technology.)  I am Program Head of AI Management!  I used to be Program Head of Business Analytics! Before that I was Program Head for Business Math.  Also, Academic Coordinator.  That's a lot!
 
 An author you say?  Feel free to purchase [Essentials of Business Statistics](http://wileyplus.wiley.com/essentials-of-business-statistics-canadian-edition/), available through Wiley.
 
