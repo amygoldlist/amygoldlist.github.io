@@ -4,10 +4,10 @@ title: More about me
 subtitle: Links
 permalink: /links/
 ---
+## BCIT Programs
+-I'm the Program Head: [AI Manangement](https://www.bcit.ca/programs/business-information-technology-management-artificial-intelligence-management-option-diploma-full-time-623adipma/)
 
-## [Centre for Excellence in Analytics](https://www.bcit.ca/cea/)
-
-* If you are interested in learning more about Business Analytics and Data Analytics, [BCIT](https://www.bcit.ca/cea/) has you covered.
+-I am no longer Program Head, but it's still an amazing program: [Graduate Certificate in Business Analytics](https://www.bcit.ca/programs/business-analytics-graduate-certificate-full-time-a600grcert/)
 
 
 ## Some Projects
@@ -51,6 +51,7 @@ permalink: /links/
 <br>
 </h5>
 
+- [Business Analytics](https://pressbooks.bccampus.ca/businessanalytics/)
 
 
 

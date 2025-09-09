@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Amy Goldlist
-subtitle: Frequently Asked Questions (updated 2022)
+subtitle: Frequently Asked Questions (updated 2025)
 permalink: /FAQ
 ---
 
