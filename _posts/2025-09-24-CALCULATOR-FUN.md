@@ -67,7 +67,7 @@ The beauty is that this method should work for any degree polynomial.  I'm going
 $$x^5-3x^4+x^3-5x^2+x -17=0$$
 
 
-This has one real solution, at $x\approx 3.2$
+This has one real solution, at $x\approx 3.2788$, verified with Wolfram Alpha
 
 My method means putting these numbers in the calculator:
 
@@ -80,7 +80,17 @@ My method means putting these numbers in the calculator:
 | 4 | 1|1|
 | 5 | -17|1|
 
-Thes are the coefficients of our very fancy quintic equation.
+Thes are the coefficients of our very fancy quintic equation.  When I put this into my calculator, I get:  $IRR = 227.88$.  Using the definition, we know that:
+
+$$i = \frac{IRR}{100} =\frac{227.88}{100}= 2.2788$$ 
+
+and
+
+$$x =1+i = 3.2788$$
+
+Which is what I said.
+
+#### Explanation
 
 The IRR should solve the equation: 
 
@@ -97,7 +107,7 @@ If we set $x = 1+i$, we have our original equation.
 
 Now that's the problem! The IRR button uses approximation methods to find a single root: I'm not going to look this up or verify it in any way, but I like to think that it uses Newton's method to find the smallest positive root - that is, the answer most liekly to be an Interest rate.  
 
-However, if we're solving calculus equations, we often care about all the roots.  In a business context, this is often the most important one!  However, we do need all of the roots, and this method does not work:
+However, if we're solving calculus equations, we often care about all the roots.  In a business context, this is often the most important one!  However, we do need all of the roots, and this method does not work completely. 
 
 
 ## Proof by specific incorrect example:
@@ -114,9 +124,13 @@ Using our knowledge of factoring, we can see that the two roots are $3$ and $5$.
 | 1 | -8|1|
 | 2 | 15|1|
 
-and an answer of:
+and an answer of: $IRR = 200$ or from our earlier work: 
 
-...
+$$x = \frac{IRR}{100}+1 = \frac{200}{100}+1 = 3$$
+
+But we know that 5 is also an answer!  We will still need to use algebra.
+
+
 
 ## But why do this, if it doesn't give a complete answer?
 
@@ -142,10 +156,12 @@ The point I'm trying to make is that even if this method isn't useful, the act o
 I've learned a lot about teaching over the past 20 years, but I think the lessons that I learned teaching MATH 180 way back when still hold:
 * Just because I explain something really well, doesn't mean the students understand it.
 * Listening to a a lecturer talk about Calculus doesn't actually teach.  It's the homework / labs / active work that actually gets the concepts in your head.
-* The best resourse in learning how to teach is other teachers - Way back when, several of us new instructors / grad students made a teaching group where we talked things through and traded ideas.  I 
+* The best resourse in learning how to teach is other teachers - Way back when, several of us new instructors / grad students made a teaching group where we talked things through and traded ideas.  I still count that group as some of my closest friends.
+* It took me a lot longer to learn to talk with the students, and using their feedback to change my approach.  I wish I could say I learned that 20 years ago, but it took a bit longer.
 
 ## Updates
 * I am working on a post about GenAI, which is taking longer than it should.  The upshot is it's a tool, it can't do everything, but it can do some things...
 * My time as Program Head of the Business Analytics program has finally come to an end after almost 6 years.  However, I now am Program Head for AI Management, so I'm still doing more administration than needed.  I'm also serving as faculty rep on BCIT's Education Council, which has been a really eye openeing experience.  Also, all theRobert's Rules of Order I memorized in High School for model UN have really come in handy!
 * I took an actual vacation where I did not do work for 6 weeks, which was....  so nice.
 * Since Atom shut down, I'm looking for a new Markdown Editor, so feel free to send me recomendations.  
+* This website could use a refresh, and I should probably add an RSS feed to the blog...
