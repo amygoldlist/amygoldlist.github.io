@@ -1,8 +1,11 @@
 ---
 layout: post
 title: Roots of Polynomials with a Business Calculator
-
+mathjax: true
 ---
+ <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+ 
+ 
 Twenty years ago, in the fall of 2005, I taught my very first Calculus class. It was a basic Calculus for Science class, and I spent that semester thinking about, talking about, and learning about how to effectively teach.  
 
 I've done a lot of different things since then, but here I am, still teaching Calculus (though now mostly to Business students).
@@ -15,7 +18,7 @@ In case you didn't know, Business school students typically buy a calculator for
 
 <h5 align="center">
   <br>
-<img src="/images/calculator.jpg" alt = "image" width="300">
+<img src="/images/BAIIPlus.jpg" alt = "image" width="300">
 <imgcaption>This is the basic BAII Plus, not the Pro. </imgcaption>
 <br>
 </h5>
