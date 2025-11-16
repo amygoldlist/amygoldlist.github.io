@@ -7,7 +7,7 @@ permalink: /
 
 <h5 align="center">
   <br>
-<img src="/images/amy.jpg" alt = "Amy" width="300",
+<img src="/images/amy.jpg" alt = "Amy" width="300" 
  style="border-radius:50%; max-width:180px; display:block; margin:1rem auto;">
 <br>
 </h5>
