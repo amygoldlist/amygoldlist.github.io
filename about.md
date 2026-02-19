@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Amy Goldlist
-subtitle: Mathematician, Teacher, Student, Author, Parent and Data Scientist
+subtitle: Mathematician, Teacher, Student, Author, Parent, Data Scientist
 permalink: /
 ---
 
@@ -12,7 +12,7 @@ permalink: /
 <br>
 </h5>
 
-Hi! I'm Amy Goldlist, and I'm a mathematician, teacher, student, author, parent and data scientist.
+Hi! I'm Amy Goldlist, and I'm a mathematician, teacher, student, author, parent and data scientist.  I'm working on an update here.
 
  I'm a faculty member in Operations Management in the School of Business at the British Columbia Institute of Technology, [BCIT](https://www.bcit.ca/business/), where I am currently Program Head of [AI Management](https://www.bcit.ca/programs/business-information-technology-management-artificial-intelligence-management-option-diploma-full-time-623adipma/). 
 
