@@ -1,28 +1,33 @@
 /* ------------------------------------------------------------------
-   AmyGoldlist.github.io — Modern CSS refresh (Markdown-friendly)
-   - Keeps your existing Jekyll/Markdown workflow (about.md + _posts/*.md)
-   - Works with Beautiful Jekyll / Bootstrap-based layouts
-   - Palette A: Sage Olive accent
-   Place at: /css/custom.css
+   AmyGoldlist.github.io — CSS refresh (more green + wider content)
+   Style direction: Reference mockup #3 (strong olive band)
+   Markdown-first: works with normal about.md + _posts/*.md
+   Theme: Beautiful Jekyll / Bootstrap-ish
+
+   Save as: /css/custom.css
 ------------------------------------------------------------------- */
 
 :root{
+  /* Neutrals */
   --ag-bg: #FAFAF7;
   --ag-surface: #FFFFFF;
   --ag-text: #1F2320;
   --ag-muted: #5C665B;
   --ag-border: rgba(31,35,32,.12);
 
-  --ag-accent: #5B6F3A;       /* Sage olive */
-  --ag-accent-hover: #4B5D30;
-  --ag-accent-soft: #EEF3E6;
-  --ag-accent-border: #C9D6B6;
+  /* Olive palette (A) + supporting darks */
+  --ag-olive: #5B6F3A;            /* primary accent */
+  --ag-olive-dark: #3F4C25;       /* deeper olive */
+  --ag-olive-darker: #2F3A1D;     /* nav band */
+  --ag-olive-hover: #4B5D30;
+  --ag-olive-soft: #EEF3E6;
+  --ag-olive-border: #C9D6B6;
 
+  /* Effects */
   --ag-radius: 18px;
   --ag-shadow: 0 12px 26px rgba(0,0,0,.10);
 }
 
-/* Base */
 html{ scroll-behavior:smooth; }
 body{
   background: var(--ag-bg);
@@ -31,154 +36,255 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
-p, li{ line-height:1.7; }
+p, li{ line-height:1.72; }
 h1, h2, h3, h4{ letter-spacing:-0.02em; color: var(--ag-text); }
+img{ max-width:100%; height:auto; }
 
-/* Wider, calmer reading measure */
-.container,
-.container-fluid{
-  /* keeps Bootstrap centering while improving readability */
-}
+/* ---------------------------------------------------------------
+   Layout: make the reading area wider (less wasted space)
+---------------------------------------------------------------- */
 @media (min-width: 992px){
-  .container{ max-width: 980px; }
+  .container{ max-width: 1120px; } /* was ~980 in the prior patch */
+}
+@media (min-width: 1200px){
+  .container{ max-width: 1180px; }
 }
 
-/* Links */
-a{ color: var(--ag-accent); }
-a:hover, a:focus{ color: var(--ag-accent-hover); }
+/* ---------------------------------------------------------------
+   Links
+---------------------------------------------------------------- */
+a{ color: var(--ag-olive); }
+a:hover, a:focus{ color: var(--ag-olive-hover); }
 
-/* Navbar (Beautiful Jekyll usually uses .navbar-custom, but we style both) */
+/* ---------------------------------------------------------------
+   NAVBAR — stronger olive band
+   Beautiful Jekyll often uses .navbar-custom, some versions use .navbar-default
+---------------------------------------------------------------- */
 .navbar, .navbar-custom{
-  border-bottom: 1px solid var(--ag-border) !important;
+  border-bottom: 1px solid rgba(255,255,255,.18) !important;
 }
-.navbar-default, .navbar-custom{
-  background: rgba(250,250,247,.92) !important;
-  backdrop-filter: blur(6px);
+
+.navbar-default,
+.navbar-custom{
+  background: var(--ag-olive-darker) !important;
+  backdrop-filter: none;
 }
+
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav>li>a,
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a{
-  color: var(--ag-text) !important;
-  font-weight: 600;
+  color: rgba(255,255,255,.92) !important;
+  font-weight: 700;
 }
+
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .nav li a:hover{
-  color: var(--ag-accent) !important;
+  color: #fff !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
-/* Header area */
+/* Mobile toggle */
+.navbar-default .navbar-toggle,
+.navbar-custom .navbar-toggle{
+  border-color: rgba(255,255,255,.35) !important;
+}
+.navbar-default .navbar-toggle .icon-bar,
+.navbar-custom .navbar-toggle .icon-bar{
+  background-color: rgba(255,255,255,.92) !important;
+}
+
+/* Dropdowns (if any) */
+.dropdown-menu{
+  border-radius: 14px;
+  border: 1px solid var(--ag-border);
+  box-shadow: var(--ag-shadow);
+}
+
+/* ---------------------------------------------------------------
+   HEADER / HERO BAND — big olive band like mockup #3
+   Works for: homepage header, page headers, post headers
+---------------------------------------------------------------- */
 .intro-header{
   margin-bottom: 18px !important;
+  /* If your theme shows a header image, this still applies a green overlay */
+  position: relative;
 }
 
-/* Make page titles feel more modern without changing your markdown */
+/* Create an olive gradient band behind headings */
+.intro-header::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--ag-olive-darker) 0%, var(--ag-olive) 60%, rgba(91,111,58,.82) 100%);
+  z-index: 0;
+}
+
+/* If theme uses a big image, make it subtle under the olive */
+.intro-header.big-img .big-img-transition{
+  opacity: 0.14 !important;
+}
+
+/* Ensure header text sits above the band */
+.intro-header .page-heading,
+.intro-header .post-heading{
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
 .intro-header .page-heading h1,
 .intro-header .post-heading h1{
-  font-size: clamp(34px, 4vw, 52px);
+  color: #fff;
+  font-size: clamp(36px, 4.2vw, 56px);
+  text-shadow: 0 6px 18px rgba(0,0,0,.18);
 }
+
 .intro-header .page-heading .subheading,
 .intro-header .post-heading .subheading{
-  color: var(--ag-muted);
+  color: rgba(255,255,255,.88);
 }
 
-/* Content blocks (Markdown pages) */
+/* Make the header area feel taller/cleaner */
+.intro-header .page-heading,
+.intro-header .post-heading{
+  padding: 56px 0 42px;
+}
+
+/* ---------------------------------------------------------------
+   CONTENT — Markdown pages & posts (keep simple)
+---------------------------------------------------------------- */
 .page-content,
 .post-content{
-  font-size: 1.06rem;
+  font-size: 1.07rem;
 }
 
-/* Images inside posts/pages: never gigantic by default */
+/* Prevent “giant portrait” feeling: images in content get a sane default */
 .page-content img,
 .post-content img{
-  max-width: 100%;
-  height: auto;
+  display: block;
+  margin: 16px auto;
   border-radius: 14px;
 }
-.page-content img{
-  /* modest default; you can still override per-page if you want */
-  display: block;
-  margin: 14px auto;
+
+/* Optional: cap extra-large inline images without breaking full-width header images */
+.page-content img:not(.header-image),
+.post-content img:not(.header-image){
+  max-width: 860px;
 }
 
-/* Buttons (Bootstrap) */
+/* ---------------------------------------------------------------
+   BUTTONS — more olive presence
+---------------------------------------------------------------- */
 .btn{
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 10px 16px;
-}
-.btn-primary{
-  background: var(--ag-accent) !important;
-  border-color: var(--ag-accent) !important;
-  color: #fff !important;
-}
-.btn-primary:hover, .btn-primary:focus{
-  background: var(--ag-accent-hover) !important;
-  border-color: var(--ag-accent-hover) !important;
-}
-.btn-default{
-  background: #fff !important;
-  border-color: var(--ag-accent-border) !important;
-  color: var(--ag-text) !important;
-}
-.btn-default:hover, .btn-default:focus{
-  background: var(--ag-accent-soft) !important;
+  letter-spacing: .01em;
 }
 
-/* Blog index: make each post preview feel cleaner */
+.btn-primary{
+  background: var(--ag-olive) !important;
+  border-color: var(--ag-olive) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 18px rgba(47,58,29,.18);
+}
+.btn-primary:hover, .btn-primary:focus{
+  background: var(--ag-olive-hover) !important;
+  border-color: var(--ag-olive-hover) !important;
+  color: #fff !important;
+}
+
+.btn-default{
+  background: rgba(255,255,255,.95) !important;
+  border-color: rgba(255,255,255,.50) !important;
+  color: var(--ag-olive-darker) !important;
+}
+.btn-default:hover, .btn-default:focus{
+  background: #fff !important;
+  border-color: rgba(255,255,255,.70) !important;
+}
+
+/* ---------------------------------------------------------------
+   BLOG INDEX — cleaner cards + stronger green cues
+---------------------------------------------------------------- */
 .post-preview{
   margin-bottom: 30px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid var(--ag-border);
+  padding: 18px 18px 14px;
+  border: 1px solid var(--ag-border);
+  border-radius: var(--ag-radius);
+  background: var(--ag-surface);
+  box-shadow: 0 10px 20px rgba(0,0,0,.05);
 }
-.post-preview>a>.post-title{
+
+.post-preview > a > .post-title{
   color: var(--ag-text);
 }
-.post-preview>a:hover>.post-title{
-  color: var(--ag-accent);
+
+.post-preview > a:hover > .post-title{
+  color: var(--ag-olive);
 }
+
 .post-meta, .post-entry{
   color: var(--ag-muted);
 }
 
-/* Tables */
+/* Add a subtle olive rule under titles in previews */
+.post-preview > a > .post-title::after{
+  content: "";
+  display: block;
+  width: 58px;
+  height: 4px;
+  margin-top: 10px;
+  background: var(--ag-olive);
+  border-radius: 99px;
+  opacity: .9;
+}
+
+/* ---------------------------------------------------------------
+   CALLOUTS / BLOCKQUOTES — more olive
+---------------------------------------------------------------- */
+hr{ border-top: 1px solid var(--ag-border); }
+
+blockquote{
+  border-left: 5px solid var(--ag-olive);
+  background: var(--ag-olive-soft);
+  padding: 12px 16px;
+  border-radius: 14px;
+}
+
+/* Inline code + tables */
 table{ border-collapse: collapse; }
 table th, table td{
   border: 1px solid var(--ag-border);
   padding: 8px 10px;
 }
-
-/* Code */
 pre, code{ border-radius: 10px; }
 
-/* Footer */
+/* ---------------------------------------------------------------
+   FOOTER — calm but still olive links
+---------------------------------------------------------------- */
 footer{
   border-top: 1px solid var(--ag-border);
   background: rgba(250,250,247,.92) !important;
 }
 footer, footer a{ color: var(--ag-muted); }
-footer a{ color: var(--ag-accent); }
-footer a:hover{ color: var(--ag-accent-hover); }
+footer a{ color: var(--ag-olive); font-weight: 600; }
+footer a:hover{ color: var(--ag-olive-hover); }
 
-/* Small “olive” accents for common elements */
-hr{ border-top: 1px solid var(--ag-border); }
-blockquote{
-  border-left: 4px solid var(--ag-accent-border);
-  background: var(--ag-accent-soft);
-  padding: 12px 16px;
-  border-radius: 14px;
-}
-
-/* Optional helpers you can use in Markdown (no need to use them) */
+/* ---------------------------------------------------------------
+   Optional helper you can use in Markdown (totally optional)
+---------------------------------------------------------------- */
 .ag-pill{
   display:inline-block;
   padding: 6px 10px;
   border-radius: 999px;
-  background: var(--ag-accent-soft);
-  border: 1px solid var(--ag-accent-border);
+  background: var(--ag-olive-soft);
+  border: 1px solid var(--ag-olive-border);
   color: var(--ag-text);
-  font-weight: 600;
+  font-weight: 700;
   font-size: .85rem;
 }
