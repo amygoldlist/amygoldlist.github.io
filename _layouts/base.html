@@ -3,6 +3,7 @@ common-css:
   - "/css/bootstrap.min.css"
   - "/css/bootstrap-social.css"
   - "/css/main.css"
+  - "/css/custom.css"
 common-ext-css:
   - "//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
 common-googlefonts:
@@ -14,22 +15,9 @@ common-js:
   - "/js/main.js"
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
-  {% include head.html %}
-
-  <body>
-
-    {% include gtm_body.html %}
-
-    {% include nav.html %}
-
-    {{ content }}
-
-    {% include footer.html %}
-
-    {% include footer-scripts.html %}
-
-  </body>
-</html>
+{% include head.html %}
+{% include gtm_body.html %}
+{% include nav.html %}
+{{ content }}
+{% include footer.html %}
+{% include footer-scripts.html %}
