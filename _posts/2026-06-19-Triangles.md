@@ -5,7 +5,7 @@ mathjax: true
 ---
  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
  
-What is a proof?
+#What is a proof?
 
 Since this is my blog, and I get to talk about anything I want, let's talk about numbers.  People who know me know that I love technology, data, teaching and al the things I do in my work life.  But you probably also know that I started my academic career as a mathematician, and matheticians never stop thinking about the world that way.
 
@@ -37,10 +37,11 @@ When I'm stressed and need to relax, I can't sit and watch television or talk wi
 
 <h5 align="center">
   <br>
-<img src="/images/knit.jpg" alt = "stack of dishcloths" width="300">
-<imgcaption>It's my dishcloths! </imgcaption>
+<img src="/images/Knit.jpeg" alt = "image" width="300">
 <br>
 </h5>
+
+
  
 For the pattern I knit, you cast on, and increase once every row until you have a nice diagonal length, then you decrease once per row until your done.  Easy!  But sometimes, I just want to know:
 
@@ -67,8 +68,7 @@ stitches in total before I can start my decreases.  Half of this is 410.  Can I 
 
 <h5 align="center">
   <br>
-<img src="/images/triangle_board.jpg" alt = "my whiteboard" width="300">
-<imgcaption>A formula.  Of sorts</imgcaption>
+<img src="/images/triangle_board.jpeg" alt = "my whiteboard" width="300">
 <br>
 </h5>
 
