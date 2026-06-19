@@ -5,7 +5,7 @@ mathjax: true
 ---
  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
  
-#What is a proof?
+# What is a proof?
 
 Since this is my blog, and I get to talk about anything I want, let's talk about numbers.  People who know me know that I love technology, data, teaching and al the things I do in my work life.  But you probably also know that I started my academic career as a mathematician, and matheticians never stop thinking about the world that way.
 
@@ -54,6 +54,7 @@ Great question Amy!
 If the first row has one stitch, ad we increase every row, the $n$th row has $n$ stitches.  And when I'm finished the $n$th row, I have a total of:
 
 $$\Sigma_{i=1}^{n}i = \frac{n(n+1)}{2}$$ 
+
 stitches.
 
 That's what we call a triangluar number.  I'm not going to explain where this equation comes from, but I encourage you to think about it and try on your own. My student proved this by induction, and I couldn't be more proud.
@@ -83,8 +84,7 @@ It's there, it was on my board, and on the sheets attached, and that's good enou
 ## Pattern
 This pattern came from a ball of Bernat Handicrafter yarn, a long time ago.  I modified it!  
 
->Cast on 2 stitches
->
+>Cast on 2 stitches,
 >K1, Kfb
 >
 >K, Kfb to end of row
