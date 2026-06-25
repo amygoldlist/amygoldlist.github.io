@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Set — Pick a random number</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      padding: 1.25rem;
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .app-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+    .tag {
+      width: 36px; height: 36px; background: #10b981; color: white;
+      font-size: 1.1rem; font-weight: 900; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .app-head h1 { font-size: 1.25rem; font-weight: 700; color: #111827; line-height: 1.2; }
+    .app-head p  { font-size: 0.8rem; color: #6e6e73; }
+
+    /* Controls */
+    .controls-card {
+      background: white; border-radius: 12px;
+      padding: 1.1rem 1.25rem; margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+      display: flex; gap: 2.5rem;
+    }
+    .ctrl { flex: 1; display: flex; flex-direction: column; gap: 0.35rem; }
+    .ctrl label {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; color: #6e6e73;
+    }
+    .ctrl input[type=range] { width: 100%; accent-color: #10b981; cursor: pointer; }
+    .ctrl-val { font-size: 1.3rem; font-weight: 700; color: #1d1d1f; line-height: 1; }
+
+    /* Panels */
+    .panel {
+      background: white; border-radius: 12px;
+      padding: 1.1rem 1.25rem; margin-bottom: 1rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    }
+    .panel-step {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.09em; color: #10b981; margin-bottom: 0.45rem;
+    }
+
+    /* Total badge */
+    .total-badge {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      background: #f0fdf4; color: #059669;
+      font-size: 0.8rem; font-weight: 700;
+      border-radius: 20px; padding: 0.22rem 0.75rem;
+      border: 1px solid #a7f3d0; margin-bottom: 0.75rem;
+    }
+
+    /* Ball pool */
+    #urn-pool {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: flex-start;
+      max-height: 280px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #d1d5db transparent;
+      padding: 2px;
+    }
+
+    .ball {
+      width: 29px; height: 29px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.57rem; font-weight: 800; color: white;
+      text-shadow: 0 1px 2px rgba(0,0,0,.38);
+      border: 2px solid rgba(0,0,0,.12);
+      flex-shrink: 0; user-select: none;
+    }
+    .ball.pop { animation: ballpop .25s ease-out; }
+    @keyframes ballpop {
+      0%   { transform: scale(0); opacity: 0; }
+      65%  { transform: scale(1.2); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Composition panel */
+    .comp-blurb {
+      font-size: 0.88rem;
+      color: #374151;
+      line-height: 1.55;
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .comp-blurb strong { color: #059669; }
+
+    /* Frequency bars */
+    .freq-bars { display: flex; flex-direction: column; gap: 0.45rem; }
+    .freq-row { display: flex; align-items: center; gap: 0.55rem; }
+    .freq-swatch {
+      width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0;
+      border: 2px solid rgba(0,0,0,.1);
+    }
+    .freq-label { font-size: 0.7rem; font-weight: 700; color: #374151; min-width: 1.1rem; }
+    .freq-track { flex: 1; background: #f3f4f6; border-radius: 4px; height: 16px; overflow: hidden; }
+    .freq-fill  { height: 100%; border-radius: 4px; }
+    .freq-count { font-size: 0.73rem; font-weight: 700; color: #374151; min-width: 2.8rem; text-align: right; }
+    .freq-pct   { font-size: 0.7rem; color: #9ca3af; min-width: 3rem; }
+
+    /* Buttons */
+    .btn-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.85rem; }
+    button {
+      padding: 0.44rem 1.05rem; border-radius: 8px; border: none;
+      cursor: pointer; font-size: 0.83rem; font-weight: 600;
+      font-family: inherit; transition: background .15s, transform .1s; line-height: 1.4;
+    }
+    button:active:not(:disabled) { transform: scale(.96); }
+    button:disabled { opacity: .35; cursor: default; }
+    .btn-green { background: #10b981; color: white; }
+    .btn-green:hover:not(:disabled) { background: #059669; }
+    .btn-gray  { background: #e5e7eb; color: #374151; }
+    .btn-gray:hover:not(:disabled)  { background: #d1d5db; }
+  </style>
+</head>
+<body>
+
+<div class="app-head">
+  <div class="tag">D</div>
+  <div>
+    <h1>Bootstrap: Choose a Random Seed</h1>
+    <p>Each draw adds M balls back in — the training set keeps growing.</p>
+  </div>
+</div>
+
+<div class="controls-card">
+  <div class="ctrl">
+    <label for="n-range">Starting balls (N)</label>
+    <input type="range" id="n-range" min="2" max="10" value="5">
+    <div class="ctrl-val">N&nbsp;=&nbsp;<span id="n-val">5</span></div>
+  </div>
+  <div class="ctrl">
+    <label for="m-range">Drawn &amp; added per round (M)</label>
+    <input type="range" id="m-range" min="2" max="20" value="6">
+    <div class="ctrl-val">M&nbsp;=&nbsp;<span id="m-val">6</span></div>
+  </div>
+</div>
+
+<!-- Urn -->
+<div class="panel">
+  <div class="panel-step">The Urn</div>
+  <div class="total-badge" id="total-badge">5 balls in urn</div>
+  <div id="urn-pool"></div>
+  <div class="btn-row">
+    <button class="btn-green" id="draw-btn">Draw &amp; Add M balls</button>
+    <button class="btn-gray"  id="reset-btn">Reset</button>
+  </div>
+</div>
+
+<!-- Composition -->
+<div class="panel">
+  <div class="panel-step">Current composition</div>
+  <div class="comp-blurb" id="comp-blurb"></div>
+  <div class="freq-bars" id="freq-bars"></div>
+</div>
+
+<script>
+'use strict';
+
+const PALETTE = [
+  '#e74c3c','#3b82f6','#22c55e','#f59e0b','#8b5cf6',
+  '#06b6d4','#f97316','#64748b','#ec4899','#14b8a6'
+];
+
+let N = 5, M = 6;
+let urn = [];        // flat array of {id, color}
+let drawCount = 0;
+let lastBatchStart = 0;  // index where the most-recent draw begins
+
+const nRange     = document.getElementById('n-range');
+const mRange     = document.getElementById('m-range');
+const nVal       = document.getElementById('n-val');
+const mVal       = document.getElementById('m-val');
+const urnPool    = document.getElementById('urn-pool');
+const totalBadge = document.getElementById('total-badge');
+const compBlurb  = document.getElementById('comp-blurb');
+const freqBarsEl = document.getElementById('freq-bars');
+const drawBtn    = document.getElementById('draw-btn');
+const resetBtn   = document.getElementById('reset-btn');
+
+function renderUrn() {
+  urnPool.innerHTML = '';
+  urn.forEach((b, i) => {
+    const d = document.createElement('div');
+    d.className = 'ball' + (i >= lastBatchStart && drawCount > 0 ? ' pop' : '');
+    d.style.background = b.color;
+    d.textContent = b.id + 1;
+    urnPool.appendChild(d);
+  });
+  // Scroll to show new balls
+  if (drawCount > 0) {
+    requestAnimationFrame(() => {
+      urnPool.scrollTop = urnPool.scrollHeight;
+    });
+  }
+}
+
+function renderComposition() {
+  // Blurb
+  if (drawCount === 0) {
+    compBlurb.innerHTML =
+      `The urn holds <strong>${N}</strong> unique ball${N !== 1 ? 's' : ''}, one of each type. ` +
+      `Each draw will sample ${M} with replacement and drop them all back in.`;
+  } else {
+    const total = N + drawCount * M;
+    compBlurb.innerHTML =
+      `Started with <strong>${N}</strong> ball${N !== 1 ? 's' : ''}. ` +
+      `After <strong>${drawCount}</strong> draw${drawCount !== 1 ? 's' : ''} of <strong>${M}</strong>, ` +
+      `the urn holds <strong>${total}</strong> balls. ` +
+      (drawCount === 1
+        ? `That first draw already shaped the mix — some types got lucky, others didn't.`
+        : `Early draws had the most influence; the proportions are now settling.`);
+  }
+
+  // Bars
+  const counts = Array(N).fill(0);
+  urn.forEach(b => counts[b.id]++);
+  const maxCount = Math.max(...counts);
+
+  freqBarsEl.innerHTML = '';
+  counts.forEach((cnt, i) => {
+    const pct = (cnt / urn.length * 100).toFixed(1);
+    const barPct = maxCount > 0 ? (cnt / maxCount * 100) : 0;
+
+    const row = document.createElement('div');
+    row.className = 'freq-row';
+
+    const swatch = document.createElement('div');
+    swatch.className = 'freq-swatch';
+    swatch.style.background = PALETTE[i];
+
+    const lbl = document.createElement('div');
+    lbl.className = 'freq-label';
+    lbl.textContent = i + 1;
+
+    const track = document.createElement('div');
+    track.className = 'freq-track';
+    const fill = document.createElement('div');
+    fill.className = 'freq-fill';
+    fill.style.background = PALETTE[i];
+    fill.style.width = barPct + '%';
+    track.appendChild(fill);
+
+    const countEl = document.createElement('div');
+    countEl.className = 'freq-count';
+    countEl.textContent = `×${cnt}`;
+
+    const pctEl = document.createElement('div');
+    pctEl.className = 'freq-pct';
+    pctEl.textContent = pct + '%';
+
+    row.append(swatch, lbl, track, countEl, pctEl);
+    freqBarsEl.appendChild(row);
+  });
+}
+
+function updateBadge() {
+  totalBadge.textContent = `${urn.length} ball${urn.length !== 1 ? 's' : ''} in urn`;
+}
+
+function init() {
+  urn = Array.from({length: N}, (_, i) => ({ id: i, color: PALETTE[i] }));
+  drawCount = 0;
+  lastBatchStart = 0;
+  renderUrn();
+  updateBadge();
+  renderComposition();
+}
+
+function draw() {
+  lastBatchStart = urn.length;
+  const drawn = Array.from({length: M}, () => urn[Math.floor(Math.random() * urn.length)]);
+  urn.push(...drawn);
+  drawCount++;
+  renderUrn();
+  updateBadge();
+  renderComposition();
+}
+
+nRange.addEventListener('input', () => { N = +nRange.value; nVal.textContent = N; init(); });
+mRange.addEventListener('input', () => { M = +mRange.value; mVal.textContent = M; });
+drawBtn.addEventListener('click', draw);
+resetBtn.addEventListener('click', init);
+
+init();
+</script>
+</body>
+</html>

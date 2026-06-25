@@ -173,6 +173,33 @@ In this particular example, it took 11 rounds to end up with a row of purple bal
 My hypothesis is that we are essentially in a large repeated Bootstrap experiment.  The early LLMs were trained on a vast amount of data - say all of the colours of the rainbow.  As we started using them to produce content, creating a large amount of output, this was added to the training data of later models.  Essentially, on a very large scale, we've been pulling balls out of the box, creating content, and feeding it back to the machine.  We've created a boring model, one that inevitably will choose `random.seed = 42` anytime you write Machine Learning code.  Was this inevitable?  No, I think it was inevitable that LLMs would become less creative, but these particular quirks of LLMs were just the luck of the draw.
 
 
+## This feels over simplified:  where did the original training data go?
+
+Of course, the real world is more complicated - that original, heterogeneous training set still exists.  It's more like bootstraping to expand the set.  See what happens when we start with a balanced set, (uniform probabilities), and keep bootstrapping from it.  
+
+
+<iframe src="/images/Bootstraps/bootstrap-d.html"
+        width="100%"
+        height="700"
+        style="border:none; border-radius:14px;"
+        loading="lazy">
+</iframe>
+
+
+We quickly end up with something unbablanced, where most of the time we get a specific result.  
+
+<h5 align="center">
+  <br>
+<img src="/images/Bootstraps/new_boots.jpg" alt = "An unbalanced Set" >
+<br>
+</h5>
+
+
+## Conclusion
+
+I'm still thinking about this. We can calculate explicit formulae showing why this happens, but it's enough to know it has.  LLMs are getting boring and it's not just coincidence -- it's statistics.  :)
+
+
 ### References:
 *It's actually really tough to find out why LLMs say what they say!  So some of these are my best guess.*
 
