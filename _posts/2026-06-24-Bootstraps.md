@@ -18,10 +18,9 @@ The activity did not go as planned.
 
 
 
-
 <h5 align="center">
   <br>
-<img src="/images/Bootstraps/Claude_RL.jpg" alt = "Results from Claude" width="300">
+<img src="/images/Bootstraps/claude_RL.jpg" alt = "Results from Claude" width="300">
 <br>
 </h5>
 
