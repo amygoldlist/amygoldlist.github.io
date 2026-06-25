@@ -176,8 +176,8 @@ My hypothesis is that we are essentially in a large repeated Bootstrap experimen
 ### References:
 *It's actually really tough to find out why LLMs say what they say!  So some of these are my best guess.*
 
-* https://claude.ai/chat/98171293-e040-4aed-8777-b83be198379f
-* https://chatgpt.com/c/6a3c5673-ec20-83e8-9f88-3cf878bb70e3
-* https://gemini.google.com/app/aecbe44a7834a3eb
-* My guess on why 42 is always the random number is that it is in some `sklearn` documentation, https://scikit-learn.org/stable/index.html, but probably from Douglas Adams classis "Hitchhikers Guide to the Galaxy"
-* My best guess on the restaurant analogy is that it came from Richard Feynman.  Here's a recent Nature article explaining.  https://www.nature.com/articles/d41586-026-00821-4 Note:  you will need a Nature subscription.
+* [https://claude.ai/chat/98171293-e040-4aed-8777-b83be198379f](https://claude.ai/chat/98171293-e040-4aed-8777-b83be198379f)
+* [https://chatgpt.com/c/6a3c5673-ec20-83e8-9f88-3cf878bb70e3](https://chatgpt.com/c/6a3c5673-ec20-83e8-9f88-3cf878bb70e3)
+* [https://gemini.google.com/app/aecbe44a7834a3eb](https://gemini.google.com/app/aecbe44a7834a3eb)
+* My guess on why 42 is always the random number is that it is in some [`sklearn`](https://scikit-learn.org/stable/index.html) documentation, but probably from Douglas Adams classis "Hitchhikers Guide to the Galaxy"
+* My best guess on the restaurant analogy is that it came from Richard Feynman.  Here's a recent Nature article explaining.  [https://www.nature.com/articles/d41586-026-00821-4](https://www.nature.com/articles/d41586-026-00821-4) Note:  you will need a Nature subscription.
