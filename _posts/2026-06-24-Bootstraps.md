@@ -36,7 +36,7 @@ The activity did not go as planned.
  
  ---
 
- ###  [Claude Opus 4.8](https://claude.ai/chat/98171293-e040-4aed-8777-b83be198379f)
+###  [Claude Opus 4.8](https://claude.ai/chat/98171293-e040-4aed-8777-b83be198379f)
  
  *Image above, here's the relevant paragraph:*
  
