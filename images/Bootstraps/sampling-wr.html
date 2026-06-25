@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>With vs Without Replacement</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .app { width: 100%; max-width: 620px; }
+
+    /* ── Header ── */
+    .app-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+
+    .tag {
+      width: 32px; height: 32px;
+      background: #22c55e;
+      color: white;
+      font-size: 0.72rem; font-weight: 900;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      letter-spacing: -0.03em;
+    }
+
+    .app-head h1 { font-size: 1.15rem; font-weight: 700; color: #111827; line-height: 1.2; }
+    .app-head p  { font-size: 0.78rem; color: #6b7280; }
+
+    /* ── Controls ── */
+    .controls {
+      display: flex; gap: 1.5rem;
+      background: white; border-radius: 12px;
+      padding: 0.9rem 1.15rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+      margin-bottom: 0.85rem;
+    }
+    .ctrl { flex: 1; }
+    .ctrl-lbl { display: block; font-size: 0.68rem; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+    .ctrl input[type=range] { width: 100%; accent-color: #22c55e; }
+    .ctrl-val { font-size: 1.1rem; font-weight: 700; color: #111827; margin-top: 0.15rem; }
+
+    /* ── Card ── */
+    .card { background: white; border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.09); overflow: hidden; }
+
+    /* ── Buttons (top) ── */
+    .card-head {
+      display: flex; gap: 0.5rem; align-items: center;
+      padding: 0.85rem 1.1rem;
+      border-bottom: 1px solid #f3f4f6;
+      background: #fafafa;
+    }
+
+    .over-note {
+      font-size: 0.72rem; color: #f59e0b; font-weight: 600;
+      margin-left: 0.25rem;
+    }
+
+    /* ── Population strip ── */
+    .pop-row {
+      padding: 0.55rem 1.1rem 0.5rem;
+      border-bottom: 2px dashed #e5e7eb;
+      background: #f8fafc;
+    }
+    .pop-lbl {
+      font-size: 0.62rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.07em;
+      color: #94a3b8;
+      margin-bottom: 0.3rem;
+    }
+    .pop-balls { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    /* ── Side-by-side panels ── */
+    .panels {
+      display: grid;
+      grid-template-columns: 1fr 30px 1fr;
+      padding: 0.9rem 0.75rem 1rem;
+    }
+
+    .panel {
+      border-radius: 10px;
+      padding: 0.75rem 0.65rem 0.85rem;
+    }
+    .panel.wr  { background: #eff6ff; }
+    .panel.wor { background: #f0fdf4; }
+
+    .panel-head {
+      font-size: 0.64rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.07em;
+      text-align: center;
+      margin-bottom: 0.2rem;
+    }
+    .wr  .panel-head { color: #3b82f6; }
+    .wor .panel-head { color: #16a34a; }
+
+    .panel-sub {
+      font-size: 0.68rem; color: #9ca3af; font-weight: 500;
+      text-align: center;
+      margin-bottom: 0.6rem;
+      min-height: 1em;
+    }
+
+    .ball-wrap {
+      display: flex; flex-wrap: wrap; gap: 4px;
+      justify-content: center;
+      min-height: 30px;
+      align-items: center;
+    }
+
+    /* ── vs divider ── */
+    .vs-col {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.68rem; font-weight: 800;
+      color: #d1d5db;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Balls ── */
+    .ball {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,0,0,.1);
+      flex-shrink: 0;
+    }
+    .ball.pop { animation: bpop .22s ease-out; }
+    @keyframes bpop { 0%{transform:scale(0);opacity:0} 65%{transform:scale(1.25)} 100%{transform:scale(1);opacity:1} }
+
+    .empty-msg { font-size: 0.78rem; color: #9ca3af; font-style: italic; }
+
+    /* ── Buttons ── */
+    button {
+      border: none; border-radius: 8px; cursor: pointer;
+      font-size: 0.83rem; font-weight: 600; font-family: inherit;
+      padding: 0.48rem 1rem; line-height: 1.4;
+      transition: background .15s, transform .1s;
+    }
+    button:active:not(:disabled) { transform: scale(.97); }
+    button:disabled { opacity: .35; cursor: default; }
+
+    .btn-draw  { background: #22c55e; color: white; }
+    .btn-draw:hover:not(:disabled)  { background: #16a34a; }
+    .btn-ghost { background: #f3f4f6; color: #374151; }
+    .btn-ghost:hover:not(:disabled) { background: #e5e7eb; }
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <div class="app-head">
+    <div class="tag">W/O</div>
+    <div>
+      <h1>With vs Without Replacement</h1>
+      <p>Draw M balls from N — see what changes when you put the ball back.</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl">
+      <label class="ctrl-lbl" for="rn">Population N</label>
+      <input type="range" id="rn" min="2" max="10" value="5">
+      <div class="ctrl-val"><span id="rnv">5</span> balls</div>
+    </div>
+    <div class="ctrl">
+      <label class="ctrl-lbl" for="rm">Sample size M</label>
+      <input type="range" id="rm" min="2" max="16" value="8">
+      <div class="ctrl-val"><span id="rmv">8</span> draws</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <button class="btn-draw"  id="rdraw">Draw Sample</button>
+      <button class="btn-ghost" id="rreset" disabled>Reset</button>
+      <span class="over-note" id="rovernote"></span>
+    </div>
+
+    <div class="pop-row">
+      <div class="pop-lbl" id="rpoplbl">Population — 5 balls</div>
+      <div class="pop-balls" id="rpopballs"></div>
+    </div>
+
+    <div class="panels">
+      <div class="panel wr">
+        <div class="panel-head">With Replacement</div>
+        <div class="panel-sub" id="rwrsub">8 draws</div>
+        <div class="ball-wrap" id="rwrballs">
+          <span class="empty-msg">click Draw</span>
+        </div>
+      </div>
+
+      <div class="vs-col">vs</div>
+
+      <div class="panel wor">
+        <div class="panel-head">Without Replacement</div>
+        <div class="panel-sub" id="rworsub">8 draws</div>
+        <div class="ball-wrap" id="rworballs">
+          <span class="empty-msg">click Draw</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+(function () {
+'use strict';
+var PAL = ['#e74c3c','#3b82f6','#22c55e','#f59e0b','#8b5cf6','#06b6d4','#f97316','#64748b','#ec4899','#14b8a6'];
+
+var N = 5, M = 8, pop = [], has = false;
+var clones = [];
+
+var nR = document.getElementById('rn'),    mR = document.getElementById('rm');
+var nV = document.getElementById('rnv'),   mV = document.getElementById('rmv');
+var drawBtn  = document.getElementById('rdraw');
+var resetBtn = document.getElementById('rreset');
+var popLbl   = document.getElementById('rpoplbl');
+var popBalls = document.getElementById('rpopballs');
+var wrBalls  = document.getElementById('rwrballs');
+var worBalls = document.getElementById('rworballs');
+var wrSub    = document.getElementById('rwrsub');
+var worSub   = document.getElementById('rworsub');
+var overNote = document.getElementById('rovernote');
+
+function mkBall(col, anim) {
+  var d = document.createElement('div');
+  d.className = 'ball' + (anim ? ' pop' : '');
+  d.style.background = col;
+  return d;
+}
+
+function killClones() {
+  clones.forEach(function (c) { c.remove(); });
+  clones = [];
+}
+
+function resetPopBalls() {
+  Array.from(popBalls.querySelectorAll('.ball')).forEach(function (el) {
+    el.style.cssText = 'background:' + el.style.background;
+  });
+}
+
+function renderPop() {
+  popLbl.textContent = 'Population — ' + N + ' ball' + (N !== 1 ? 's' : '');
+  popBalls.innerHTML = '';
+  pop.forEach(function (c) { popBalls.appendChild(mkBall(c, true)); });
+}
+
+function updateLabels() {
+  var worSize = Math.min(M, N);
+  wrSub.textContent  = M + ' draw' + (M !== 1 ? 's' : '');
+  worSub.textContent = worSize === M
+    ? M + ' draw' + (M !== 1 ? 's' : '')
+    : worSize + ' draws (capped at N = ' + N + ')';
+  overNote.textContent = M > N ? 'M > N: without replacement limited to ' + N + ' balls' : '';
+}
+
+// Animate dest balls flying in from srcEls[].
+// If dimSrc=true, each source ball fades out after its clone lands (without-replacement effect).
+function flyFrom(srcEls, destData, destContainer, dimSrc) {
+  var destEls = Array.from(destContainer.querySelectorAll('.ball'));
+  var TRAVEL  = 370;
+  var STAGGER = Math.max(22, Math.min(50, Math.floor(560 / destData.length)));
+
+  // Measure all positions NOW before any delays
+  var moves = destEls.map(function (destEl, i) {
+    var srcEl = srcEls[destData[i].srcIdx];
+    if (!srcEl) return null;
+    return {
+      srcEl:  srcEl,
+      destEl: destEl,
+      sr:     srcEl.getBoundingClientRect(),
+      dr:     destEl.getBoundingClientRect(),
+      color:  srcEl.style.background
+    };
+  });
+
+  // Hide dest balls — clones will stand in until they land
+  destEls.forEach(function (el) { el.style.opacity = '0'; });
+
+  moves.forEach(function (m, i) {
+    if (!m) { destEls[i].style.opacity = ''; return; }
+
+    setTimeout(function () {
+
+      // ── Pulse source ball (skip if already pulsing or already dimmed) ──
+      if (!m.srcEl._pulsing && !dimSrc || (!m.srcEl._dimmed && dimSrc)) {
+        m.srcEl._pulsing = true;
+        m.srcEl.style.transition = 'transform 0.11s ease-out, box-shadow 0.11s ease-out';
+        m.srcEl.style.transform  = 'scale(1.45)';
+        m.srcEl.style.boxShadow  = '0 0 0 3px rgba(255,255,255,.9), 0 0 0 5px ' + m.color;
+        setTimeout(function () {
+          m.srcEl.style.transition = 'transform 0.22s ease-in, box-shadow 0.22s ease-in';
+          m.srcEl.style.transform  = '';
+          m.srcEl.style.boxShadow  = '';
+          setTimeout(function () {
+            m.srcEl.style.transition = m.srcEl.style.boxShadow = '';
+            m.srcEl._pulsing = false;
+          }, 220);
+        }, 110);
+      }
+
+      // ── Spawn clone at source position ──
+      var c = document.createElement('div');
+      c.style.cssText =
+        'position:fixed;border-radius:50%;pointer-events:none;z-index:9999;will-change:transform;' +
+        'border:2px solid rgba(0,0,0,.12);' +
+        'width:'  + m.sr.width  + 'px;' +
+        'height:' + m.sr.height + 'px;' +
+        'background:' + m.color + ';' +
+        'left:' + m.sr.left + 'px;' +
+        'top:'  + m.sr.top  + 'px;';
+      document.body.appendChild(c);
+      clones.push(c);
+      c.offsetHeight;
+
+      // ── Fly clone to destination ──
+      var dx = m.dr.left - m.sr.left;
+      var dy = m.dr.top  - m.sr.top;
+      c.style.transition = 'transform ' + TRAVEL + 'ms cubic-bezier(0.34,1.56,0.64,1)';
+      c.style.transform  = 'translate(' + dx + 'px,' + dy + 'px)';
+
+      setTimeout(function () {
+        // Remove clone, pop in real dest ball
+        var idx = clones.indexOf(c);
+        if (idx !== -1) clones.splice(idx, 1);
+        c.remove();
+
+        m.destEl.style.transition = 'opacity 0.08s, transform 0.22s cubic-bezier(0.34,1.56,0.64,1)';
+        m.destEl.style.transform  = 'scale(1.3)';
+        m.destEl.style.opacity    = '1';
+        setTimeout(function () {
+          m.destEl.style.transform = '';
+          setTimeout(function () {
+            m.destEl.style.transition = m.destEl.style.transform = '';
+          }, 220);
+        }, 40);
+
+        // ── Without replacement: dim the source ball after it's been used ──
+        if (dimSrc && !m.srcEl._dimmed) {
+          m.srcEl._dimmed = true;
+          m.srcEl.style.transition = 'opacity 0.35s ease, filter 0.35s ease';
+          m.srcEl.style.opacity    = '0.2';
+          m.srcEl.style.filter     = 'grayscale(0.8)';
+        }
+      }, TRAVEL);
+
+    }, i * STAGGER);
+  });
+}
+
+function init() {
+  killClones();
+  pop = Array.from({ length: N }, function (_, i) { return PAL[i]; });
+  has = false;
+  renderPop();
+  wrBalls.innerHTML  = '<span class="empty-msg">click Draw</span>';
+  worBalls.innerHTML = '<span class="empty-msg">click Draw</span>';
+  resetBtn.disabled  = true;
+  updateLabels();
+}
+
+function draw() {
+  killClones();
+  resetPopBalls();
+  has = true;
+
+  // With replacement: M independent draws
+  var wrData = Array.from({ length: M }, function () {
+    var i = Math.floor(Math.random() * N);
+    return { color: pop[i], srcIdx: i };
+  });
+
+  // Without replacement: Fisher-Yates shuffle, take first min(M, N)
+  var size    = Math.min(M, N);
+  var indices = Array.from({ length: N }, function (_, i) { return i; });
+  for (var j = N - 1; j > 0; j--) {
+    var k = Math.floor(Math.random() * (j + 1));
+    var tmp = indices[j]; indices[j] = indices[k]; indices[k] = tmp;
+  }
+  var worData = indices.slice(0, size).map(function (i) {
+    return { color: pop[i], srcIdx: i };
+  });
+
+  // Render dest balls (hidden — clones fly in)
+  wrBalls.innerHTML = '';
+  wrData.forEach(function (b) { wrBalls.appendChild(mkBall(b.color, false)); });
+  worBalls.innerHTML = '';
+  worData.forEach(function (b) { worBalls.appendChild(mkBall(b.color, false)); });
+
+  resetBtn.disabled = false;
+  updateLabels();
+
+  var srcEls = Array.from(popBalls.querySelectorAll('.ball'));
+
+  // Both panels animate simultaneously.
+  // With replacement: source balls pulse, stay bright (ball goes back in the bucket).
+  // Without replacement: source balls dim after use (ball is removed from bucket).
+  flyFrom(srcEls, wrData,  wrBalls,  false);
+  flyFrom(srcEls, worData, worBalls, true);
+}
+
+nR.addEventListener('input', function () { N = +nR.value; nV.textContent = N; init(); });
+mR.addEventListener('input', function () { M = +mR.value; mV.textContent = M; if (has) draw(); else updateLabels(); });
+drawBtn.addEventListener('click', draw);
+resetBtn.addEventListener('click', init);
+
+init();
+})();
+</script>
+</body>
+</html>

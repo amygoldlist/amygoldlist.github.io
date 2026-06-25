@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap A — Stack</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .app { width: 100%; max-width: 580px; }
+
+    /* ── Header ── */
+    .app-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+
+    .tag {
+      width: 32px; height: 32px;
+      background: #3b82f6;
+      color: white;
+      font-size: 1rem; font-weight: 900;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .app-head h1 { font-size: 1.15rem; font-weight: 700; color: #111827; line-height: 1.2; }
+    .app-head p  { font-size: 0.78rem; color: #6b7280; }
+
+    /* ── Controls ── */
+    .controls {
+      display: flex; gap: 1.5rem;
+      background: white; border-radius: 12px;
+      padding: 0.9rem 1.15rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+      margin-bottom: 0.85rem;
+    }
+    .ctrl { flex: 1; }
+    .ctrl-lbl { display: block; font-size: 0.68rem; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+    .ctrl input[type=range] { width: 100%; accent-color: #3b82f6; }
+    .ctrl-val { font-size: 1.1rem; font-weight: 700; color: #111827; margin-top: 0.15rem; }
+
+    /* ── Card ── */
+    .card { background: white; border-radius: 14px; box-shadow: 0 2px 10px rgba(0,0,0,.09); overflow: hidden; }
+
+    /* ── Buttons (pinned top) ── */
+    .card-foot {
+      display: flex; gap: 0.5rem;
+      padding: 0.85rem 1.1rem;
+      border-bottom: 1px solid #f3f4f6;
+      background: #fafafa;
+    }
+
+    /* ── Population strip ── */
+    .pop-row {
+      padding: 0.55rem 1.1rem 0.5rem;
+      border-bottom: 2px dashed #e5e7eb;
+      background: #f8fafc;
+    }
+    .pop-lbl {
+      font-size: 0.62rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.07em;
+      color: #94a3b8;
+      margin-bottom: 0.3rem;
+    }
+    .pop-balls { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    /* ── Scrollable rows ── */
+    .rows-wrap {
+      max-height: 400px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #e5e7eb transparent;
+    }
+
+    /* ── Row entries ── */
+    .row-entry {
+      display: flex; align-items: center; gap: 0.65rem;
+      padding: 0.55rem 1.1rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .row-entry:last-child { border-bottom: none; }
+
+    .row-entry.is-sample {
+      background: #eff6ff;
+      border-left: 3px solid #3b82f6;
+      padding-left: calc(1.1rem - 3px);
+    }
+
+    .row-entry.is-new { animation: rowflash .6s ease-out; }
+    @keyframes rowflash { 0% { background: #fff7ed; } 100% { background: white; } }
+
+    .badge {
+      width: 20px; height: 20px;
+      border-radius: 5px;
+      font-size: 0.58rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      background: #f3f4f6; color: #9ca3af;
+    }
+    .row-entry.is-sample .badge { background: #3b82f6; color: white; }
+
+    .row-balls { display: flex; flex-wrap: wrap; gap: 4px; }
+
+    /* ── Balls ── */
+    .ball {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      border: 2px solid rgba(0,0,0,.1);
+      flex-shrink: 0;
+    }
+    /* only used for pop-row initial appear */
+    .ball.pop { animation: bpop .22s ease-out; }
+    @keyframes bpop { 0%{transform:scale(0);opacity:0} 65%{transform:scale(1.25)} 100%{transform:scale(1);opacity:1} }
+
+    .empty { padding: 3rem; text-align: center; color: #9ca3af; font-size: 0.88rem; line-height: 1.6; }
+
+    /* ── Buttons ── */
+    button {
+      border: none; border-radius: 8px; cursor: pointer;
+      font-size: 0.83rem; font-weight: 600; font-family: inherit;
+      padding: 0.48rem 1rem; line-height: 1.4;
+      transition: background .15s, transform .1s;
+    }
+    button:active:not(:disabled) { transform: scale(.97); }
+    button:disabled { opacity: .35; cursor: default; }
+
+    .btn-next  { background: #f97316; color: white; flex: 1; font-size: 0.9rem; }
+    .btn-next:hover:not(:disabled)  { background: #ea6c00; }
+    .btn-draw  { background: #3b82f6; color: white; }
+    .btn-draw:hover:not(:disabled)  { background: #2563eb; }
+    .btn-ghost { background: #f3f4f6; color: #374151; }
+    .btn-ghost:hover:not(:disabled) { background: #e5e7eb; }
+
+    .row-count { font-size: 0.75rem; color: #9ca3af; align-self: center; white-space: nowrap; padding-left: 0.25rem; }
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <div class="app-head">
+    <div class="tag">A</div>
+    <div>
+      <h1>Bootstrap Sampling — Stack</h1>
+      <p>Resamples stack up below the original sample.</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl">
+      <label class="ctrl-lbl" for="an">Population N</label>
+      <input type="range" id="an" min="2" max="10" value="5">
+      <div class="ctrl-val"><span id="anv">5</span> balls</div>
+    </div>
+    <div class="ctrl">
+      <label class="ctrl-lbl" for="am">Sample size M</label>
+      <input type="range" id="am" min="3" max="24" value="8">
+      <div class="ctrl-val"><span id="amv">8</span> draws</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-foot">
+      <button class="btn-draw"  id="adraw">Draw Sample</button>
+      <button class="btn-next"  id="anext" disabled>Next Resample ↓</button>
+      <button class="btn-ghost" id="aclear" disabled>Reset</button>
+      <span class="row-count"   id="acount"></span>
+    </div>
+    <div class="pop-row">
+      <div class="pop-lbl" id="apoplbl">Population — 5 balls</div>
+      <div class="pop-balls" id="apopballs"></div>
+    </div>
+    <div class="rows-wrap" id="arows">
+      <div class="empty">Click <strong>Draw Sample</strong> to begin.</div>
+    </div>
+  </div>
+
+</div>
+<script>
+(function () {
+'use strict';
+var PAL = ['#e74c3c','#3b82f6','#22c55e','#f59e0b','#8b5cf6','#06b6d4','#f97316','#64748b','#ec4899','#14b8a6'];
+
+// rows[i] = [{color, srcIdx}] — srcIdx indexes into rows[i-1] (or pop[] for i=0)
+var N = 5, M = 8, pop = [], samp = [], rows = [], has = false;
+var clones = []; // flying ball elements appended to body
+
+var rowsEl   = document.getElementById('arows');
+var popBalls = document.getElementById('apopballs');
+var popLbl   = document.getElementById('apoplbl');
+var nR = document.getElementById('an'),    mR = document.getElementById('am');
+var nV = document.getElementById('anv'),   mV = document.getElementById('amv');
+var drawBtn  = document.getElementById('adraw');
+var nextBtn  = document.getElementById('anext');
+var clearBtn = document.getElementById('aclear');
+var countEl  = document.getElementById('acount');
+
+function mkBall(col, anim) {
+  var d = document.createElement('div');
+  d.className = 'ball' + (anim ? ' pop' : '');
+  d.style.background = col;
+  return d;
+}
+
+function renderPop() {
+  popLbl.textContent = 'Population — ' + N + ' ball' + (N !== 1 ? 's' : '');
+  popBalls.innerHTML = '';
+  pop.forEach(function (c) { popBalls.appendChild(mkBall(c, true)); });
+}
+
+function killClones() {
+  clones.forEach(function (c) { c.remove(); });
+  clones = [];
+}
+
+function render() {
+  killClones();
+  if (!rows.length) {
+    rowsEl.innerHTML = '<div class="empty">Click <strong>Draw Sample</strong> to begin.</div>';
+    nextBtn.disabled = clearBtn.disabled = true;
+    countEl.textContent = '';
+    return;
+  }
+
+  rowsEl.innerHTML = '';
+  rows.forEach(function (row, i) {
+    var isS  = i === 0;
+    var isNew = i > 0 && i === rows.length - 1;
+    var wrap = document.createElement('div');
+    wrap.className = 'row-entry' + (isS ? ' is-sample' : '') + (isNew ? ' is-new' : '');
+
+    var badge = document.createElement('div');
+    badge.className = 'badge';
+    badge.textContent = isS ? 'S' : i;
+
+    var balls = document.createElement('div');
+    balls.className = 'row-balls';
+    row.forEach(function (b) { balls.appendChild(mkBall(b.color, false)); });
+
+    wrap.appendChild(badge);
+    wrap.appendChild(balls);
+    rowsEl.appendChild(wrap);
+  });
+
+  nextBtn.disabled = clearBtn.disabled = false;
+  var n = rows.length - 1;
+  countEl.textContent = n > 0 ? n + ' resample' + (n > 1 ? 's' : '') : '';
+  rowsEl.scrollTop = rowsEl.scrollHeight;
+}
+
+// Animate balls in rows[rowIdx] flying in from srcEls[].
+// Each source ball pulses, a clone travels to the destination, then the real ball pops in.
+function flyFrom(srcEls, rowIdx) {
+  var allRowEls = rowsEl.querySelectorAll('.row-entry');
+  var rowEl = allRowEls[rowIdx];
+  if (!rowEl) return;
+
+  var destBalls = Array.from(rowEl.querySelectorAll('.ball'));
+  var rowData   = rows[rowIdx];
+  var TRAVEL    = 380;
+  var STAGGER   = Math.max(20, Math.min(48, Math.floor(560 / M)));
+
+  // Measure everything NOW before any timeouts fire
+  var moves = destBalls.map(function (destEl, i) {
+    var srcEl = srcEls[rowData[i].srcIdx];
+    if (!srcEl) return null;
+    return {
+      srcEl:  srcEl,
+      destEl: destEl,
+      sr:     srcEl.getBoundingClientRect(),
+      dr:     destEl.getBoundingClientRect(),
+      color:  srcEl.style.background
+    };
+  });
+
+  // Hide dest balls — clones will stand in until they land
+  destBalls.forEach(function (el) { el.style.opacity = '0'; });
+
+  moves.forEach(function (m, i) {
+    if (!m) {
+      destBalls[i].style.opacity = '';
+      return;
+    }
+
+    setTimeout(function () {
+
+      // ── 1. Pulse the source ball ──────────────────────────────────────
+      m.srcEl.style.transition = 'transform 0.11s ease-out, box-shadow 0.11s ease-out';
+      m.srcEl.style.transform  = 'scale(1.45)';
+      m.srcEl.style.boxShadow  = '0 0 0 3px rgba(255,255,255,0.9), 0 0 0 5px ' + m.color;
+      setTimeout(function () {
+        m.srcEl.style.transition = 'transform 0.22s ease-in, box-shadow 0.22s ease-in';
+        m.srcEl.style.transform  = '';
+        m.srcEl.style.boxShadow  = '';
+        setTimeout(function () { m.srcEl.style.transition = m.srcEl.style.boxShadow = ''; }, 220);
+      }, 110);
+
+      // ── 2. Spawn clone at source position ────────────────────────────
+      var c = document.createElement('div');
+      c.style.cssText =
+        'position:fixed;border-radius:50%;pointer-events:none;z-index:9999;will-change:transform;' +
+        'border:2px solid rgba(0,0,0,.12);' +
+        'width:'  + m.sr.width  + 'px;' +
+        'height:' + m.sr.height + 'px;' +
+        'background:' + m.color + ';' +
+        'left:' + m.sr.left + 'px;' +
+        'top:'  + m.sr.top  + 'px;';
+      document.body.appendChild(c);
+      clones.push(c);
+      c.offsetHeight; // commit starting style before transition
+
+      // ── 3. Fly clone to destination ───────────────────────────────────
+      var dx = m.dr.left - m.sr.left;
+      var dy = m.dr.top  - m.sr.top;
+      c.style.transition = 'transform ' + TRAVEL + 'ms cubic-bezier(0.34,1.56,0.64,1)';
+      c.style.transform  = 'translate(' + dx + 'px,' + dy + 'px)';
+
+      // ── 4. Clone lands: pop in the real ball ──────────────────────────
+      setTimeout(function () {
+        var idx = clones.indexOf(c);
+        if (idx !== -1) clones.splice(idx, 1);
+        c.remove();
+
+        m.destEl.style.transition = 'opacity 0.08s, transform 0.22s cubic-bezier(0.34,1.56,0.64,1)';
+        m.destEl.style.transform  = 'scale(1.3)';
+        m.destEl.style.opacity    = '1';
+        setTimeout(function () {
+          m.destEl.style.transform = '';
+          setTimeout(function () {
+            m.destEl.style.transition = m.destEl.style.transform = '';
+          }, 220);
+        }, 40);
+      }, TRAVEL);
+
+    }, i * STAGGER);
+  });
+}
+
+function init() {
+  killClones();
+  pop  = Array.from({ length: N }, function (_, i) { return PAL[i]; });
+  has  = false; samp = []; rows = [];
+  renderPop();
+  render();
+}
+
+function draw() {
+  var newSamp = Array.from({ length: M }, function () {
+    var i = Math.floor(Math.random() * N);
+    return { color: pop[i], srcIdx: i };
+  });
+  samp = newSamp;
+  has  = true;
+  rows = [newSamp];
+  render();
+  flyFrom(Array.from(popBalls.querySelectorAll('.ball')), 0);
+}
+
+function next() {
+  if (!has) return;
+  var src = rows[rows.length - 1];
+  var newRow = Array.from({ length: M }, function () {
+    var i = Math.floor(Math.random() * src.length);
+    return { color: src[i].color, srcIdx: i };
+  });
+  rows.push(newRow);
+  render();
+
+  var allRowEls = rowsEl.querySelectorAll('.row-entry');
+  var srcRowEl  = allRowEls[allRowEls.length - 2];
+  if (srcRowEl) {
+    flyFrom(Array.from(srcRowEl.querySelectorAll('.ball')), rows.length - 1);
+  }
+}
+
+nR.addEventListener('input', function () { N = +nR.value; nV.textContent = N; init(); });
+mR.addEventListener('input', function () { M = +mR.value; mV.textContent = M; if (has) draw(); });
+drawBtn.addEventListener('click', draw);
+nextBtn.addEventListener('click', next);
+clearBtn.addEventListener('click', function () { rows = has ? [samp] : []; render(); });
+
+init();
+})();
+</script>
+</body>
+</html>
