@@ -36,9 +36,9 @@ The activity did not go as planned.
  
  ---
 
- ### [Claude Opus 4.8](https://claude.ai/chat/98171293-e040-4aed-8777-b83be198379f)
+ ###  [Claude Opus 4.8](https://claude.ai/chat/98171293-e040-4aed-8777-b83be198379f)
  
- *image above, here's the relevant paragraph:*
+ *Image above, here's the relevant paragraph:*
  
  
  >A classic way to picture it: imagine you've moved to a new town with several restaurants. You could keep going back to the one decent place you've already found (exploitation), guaranteeing a meal you know is good. Or you could try an unfamiliar restaurant (exploration), risking a bad dinner but possibly discovering somewhere much better. If you only ever exploit, you might never find the best restaurant in town. If you only ever explore, you waste a lot of meals on mediocre places and never settle into enjoying what you've found.
