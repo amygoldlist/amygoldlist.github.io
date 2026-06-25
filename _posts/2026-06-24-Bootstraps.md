@@ -50,7 +50,7 @@ The activity did not go as planned.
 
 <h5 align="center">
   <br>
-<img src="/images/Bootstraps/gpt_RL.jpg" alt = "Results from ChatGPT" 
+<img src="/images/Bootstraps/gpt_RL.jpg" alt = "Results from ChatGPT" >
 <br>
 </h5>
 
@@ -69,7 +69,7 @@ The activity did not go as planned.
 
 <h5 align="center">
   <br>
-<img src="/images/Bootstraps/gemini_RL.jpg" alt = "Results from Gemini" 
+<img src="/images/Bootstraps/gemini_RL.jpg" alt = "Results from Gemini" >
 <br>
 </h5>
 
@@ -137,7 +137,7 @@ Play with different values, constantly resampling from the previous resample.  M
 
 <h5 align="center">
   <br>
-<img src="/images/Bootstraps/five_by_five.jpg" alt = "An example" 
+<img src="/images/Bootstraps/five_by_five.jpg" alt = "An example" >
 <br>
 </h5>
 
@@ -147,7 +147,7 @@ If we start with more balls, does it improve?
 
 <h5 align="center">
   <br>
-<img src="/images/Bootstraps/ten_by_five.jpg" alt = "Another example" 
+<img src="/images/Bootstraps/ten_by_five.jpg" alt = "Another example" >
 <br>
 </h5>
 
@@ -155,7 +155,7 @@ No, it does not!  We lose most of that information very quickly.  If we make a b
 
 <h5 align="center">
   <br>
-<img src="/images/Bootstraps/five_by_ten.jpg" alt = "Another example" 
+<img src="/images/Bootstraps/five_by_ten.jpg" alt = "Another example" >
 <br>
 </h5>
 
